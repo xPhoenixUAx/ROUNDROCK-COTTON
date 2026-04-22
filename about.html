@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how ROUNDROCK COTTON s.r.o. approaches digital strategy, web design, development, launch delivery, and long-term support.">
+  <title>About | ROUNDROCK COTTON s.r.o.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/bundle.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body data-page="about">
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-mark" href="index.html" aria-label="ROUNDROCK COTTON home">
+        <span class="brand-mark__glyph">RC</span>
+        <span class="brand-mark__text">
+          <strong>ROUNDROCK COTTON s.r.o.</strong>
+          <small>Marketing, Design &amp; Development</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-utility desktop-only" href="contact.html" aria-label="Open project contact panel" data-drawer-open>
+          <span class="header-utility__icon">
+            <i data-lucide="clipboard-pen-line"></i>
+          </span>
+          <span class="header-utility__text">
+            <small>Let’s Talk</small>
+            <strong>Start Your Project</strong>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay__backdrop" data-menu-close></div>
+    <div class="menu-overlay__panel">
+      <div class="menu-overlay__top">
+        <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
+        <button class="menu-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button>
+      </div>
+      <nav class="menu-overlay__nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="service-detail.html">Service Detail</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-overlay__footer">
+        <a class="btn btn--primary" href="contact.html">Send a Project Request</a>
+        <p>From strategy and websites to launch, support, and digital growth, every conversation starts through one clear project form.</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="contact-drawer" aria-hidden="true">
+    <div class="contact-drawer__backdrop" data-drawer-close></div>
+    <div class="contact-drawer__panel">
+      <div class="contact-drawer__top">
+        <div>
+          <p class="eyebrow">Let’s Talk</p>
+          <h2>Tell us what you have in mind.</h2>
+          <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
+        </div>
+        <button class="contact-drawer__close" type="button" aria-label="Close contact panel" data-drawer-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <ul class="contact-drawer__list">
+        <li><strong>Good fit for:</strong> new websites, redesigns, development work, launch support, and ongoing updates</li>
+        <li><strong>Best way to reach us:</strong> send the brief through the form and include as much context as you can</li>
+        <li><strong>What happens next:</strong> we review the request and come back with a clear next step</li>
+      </ul>
+      <div class="contact-drawer__actions">
+        <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
+        <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
+      </div>
+      <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
+      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidická 700/19<br>602 00 Brno, Czech Republic</p>
+    </div>
+  </aside>
+
+  <div class="contact-modal" aria-hidden="true">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle-about">
+      <div class="contact-modal__top">
+        <div>
+          <p class="eyebrow">Project Inquiry</p>
+          <h2 id="modalTitle-about">Tell us what kind of partner you need on the project.</h2>
+          <p>If you need one team across strategy, design, development, and support, outline the scope here and we will review it properly.</p>
+        </div>
+        <button class="contact-modal__close" type="button" aria-label="Close contact form" data-modal-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <form class="contact-form" action="contact.php" method="post">
+        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
+        <label><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
+        <label>
+          <span>Service interest</span>
+          <select name="service">
+            <option value="">Select a focus area</option>
+            <option>Digital Strategy</option>
+            <option>Performance Marketing</option>
+            <option>Web Design</option>
+            <option>Website Development</option>
+            <option>Frontend Development</option>
+            <option>Backend Development</option>
+            <option>Landing Page Design</option>
+            <option>Support &amp; Maintenance</option>
+            <option>Full-Cycle Delivery</option>
+          </select>
+        </label>
+        <label>
+          <span>Budget range</span>
+          <select name="budget">
+            <option value="">Select a range</option>
+            <option>$5k - $15k</option>
+            <option>$15k - $35k</option>
+            <option>$35k - $75k</option>
+            <option>$75k+</option>
+          </select>
+        </label>
+        <label class="contact-form__full"><span>Project details</span><textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea></label>
+        <input type="hidden" name="return_to" value="about.html">
+        <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--primary" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero--about scene-section">
+      <div class="container about-hero">
+        <div class="about-hero__copy">
+          <p class="eyebrow reveal" data-reveal="fade-up">About ROUNDROCK COTTON s.r.o.</p>
+          <h1 class="split-text">A full-cycle digital company built for clients who need planning, design, development, and launch accountability in one place.</h1>
+          <p class="reveal" data-reveal="fade-up">
+            ROUNDROCK COTTON s.r.o. exists because too many companies still have to split website strategy, design, development, and support across separate teams. We built the company to keep the process connected from first brief to post-launch upkeep.
+          </p>
+        </div>
+        <div class="about-hero__media reveal" data-reveal="fade-left">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Refined creative office setting that supports the brand story of ROUNDROCK COTTON s.r.o.">
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section scene-section">
+      <div class="container story-grid">
+        <article class="story-card reveal" data-reveal="fade-up">
+          <p class="eyebrow">Brand statement</p>
+          <h2>ROUNDROCK COTTON s.r.o. builds the digital systems companies need when clarity, implementation quality, and delivery speed all matter.</h2>
+        </article>
+        <article class="story-card reveal" data-reveal="fade-up">
+          <p class="eyebrow">Mission</p>
+          <p>Replace fragmented digital delivery with one coordinated system that aligns strategy, web design, development, launch, and ongoing support.</p>
+        </article>
+        <article class="story-card reveal" data-reveal="fade-up">
+          <p class="eyebrow">Differentiator</p>
+          <p>We do not separate planning from design or design from development. The concept, interface, build, and launch logic are shaped together.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="philosophy-section scene-section">
+      <div class="container split-panel">
+        <div class="split-panel__intro reveal" data-reveal="fade-up">
+          <p class="eyebrow">Why the company exists</p>
+          <h2>Digital projects slow down when strategy, design, and engineering are disconnected.</h2>
+          <p>
+            One team defines the concept, another designs without technical context, a third tries to build around shifting requirements, and support starts only after launch problems appear. ROUNDROCK COTTON was created to fix that fragmentation with one unified delivery practice.
+          </p>
+        </div>
+        <div class="split-panel__stack">
+          <article class="detail-card reveal" data-reveal="fade-left">
+            <i data-lucide="crosshair"></i>
+            <h3>Clarity before activity</h3>
+            <p>We would rather refine the offer and message first than rush volume through weak conversion conditions.</p>
+          </article>
+          <article class="detail-card reveal" data-reveal="fade-left">
+            <i data-lucide="layers-3"></i>
+            <h3>Systems over isolated wins</h3>
+            <p>We optimize the relationship between channels, pages, content, and reporting because that is where sustained improvement happens.</p>
+          </article>
+          <article class="detail-card reveal" data-reveal="fade-left">
+            <i data-lucide="badge-dollar-sign"></i>
+            <h3>Commercial creativity</h3>
+            <p>Creative quality matters more when it carries business logic, not less. We treat it as a lever for conversion and distinction.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles-section scene-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">Operating principles</p>
+          <h2>How we work with clients, internally and externally.</h2>
+        </div>
+        <div class="principles-grid">
+          <article class="principle-card reveal" data-reveal="fade-up">
+            <h3>Make strategy usable</h3>
+            <p>We translate positioning and audience insight into things teams can actually deploy across campaigns, pages, and sales conversations.</p>
+          </article>
+          <article class="principle-card reveal" data-reveal="fade-up">
+            <h3>Measure what changes decisions</h3>
+            <p>Reports should narrow the next move. If a metric does not improve budget, message, or conversion choices, it should not dominate the conversation.</p>
+          </article>
+          <article class="principle-card reveal" data-reveal="fade-up">
+            <h3>Protect brand quality while scaling</h3>
+            <p>Growth should not make a company look cheaper, louder, or less coherent. Scale needs its own creative discipline.</p>
+          </article>
+          <article class="principle-card reveal" data-reveal="fade-up">
+            <h3>Keep execution moving</h3>
+            <p>Good thinking loses value when approvals drag and decisions drift. We prefer defined rhythms, clear owners, and visible next actions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="client-fit-section scene-section">
+      <div class="container client-fit__grid">
+        <div class="client-fit__panel reveal" data-reveal="fade-right">
+          <p class="eyebrow">Who we support best</p>
+          <h2>Brands ready for sharper direction and better operating discipline.</h2>
+          <ul>
+            <li>Founders who need a stronger market story before scaling acquisition</li>
+            <li>Service businesses that want more qualified leads instead of more noise</li>
+            <li>Premium product brands that need campaigns and pages to feel as refined as the product itself</li>
+            <li>Marketing teams that want an outside strategic partner, not just execution overflow</li>
+          </ul>
+        </div>
+        <div class="client-fit__panel reveal" data-reveal="fade-left">
+          <p class="eyebrow">Collaboration model</p>
+          <h2>Senior thinking, direct communication, and tight working loops.</h2>
+          <p>We keep the team structure lean and experienced. Clients work with senior operators who can move from diagnostic thinking to campaign planning, creative direction, page strategy, and commercial reporting without handoff dilution.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section scene-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">Values</p>
+          <h2>The standards behind the work.</h2>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal" data-reveal="fade-up">
+            <span>01</span>
+            <h3>Clarity</h3>
+            <p>Messages, plans, and reporting should reduce confusion rather than perform sophistication.</p>
+          </article>
+          <article class="value-card reveal" data-reveal="fade-up">
+            <span>02</span>
+            <h3>Precision</h3>
+            <p>Good marketing is not louder by default. It is more exact about audience, offer, proof, and timing.</p>
+          </article>
+          <article class="value-card reveal" data-reveal="fade-up">
+            <span>03</span>
+            <h3>Craft</h3>
+            <p>Design, writing, and creative execution shape trust. We treat them as commercial assets, not polish added later.</p>
+          </article>
+          <article class="value-card reveal" data-reveal="fade-up">
+            <span>04</span>
+            <h3>Accountability</h3>
+            <p>Strategy earns its place when it produces clearer decisions, stronger execution, and better business outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner scene-section">
+      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
+        <p class="eyebrow">Work with ROUNDROCK COTTON</p>
+        <h2>If you need a sharper strategic partner, we are ready to look at the growth system with you.</h2>
+        <p>Bring the challenge as it stands today. We will help clarify the leverage, the structure, and the right next move.</p>
+        <a class="btn btn--primary" href="contact.html">Start the conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark brand-mark--footer" href="index.html">
+          <span class="brand-mark__glyph">RC</span>
+          <span class="brand-mark__text">
+            <strong>ROUNDROCK COTTON s.r.o.</strong>
+            <small>Full-cycle digital delivery for modern companies.</small>
+          </span>
+        </a>
+        <p class="footer-note">ROUNDROCK COTTON s.r.o. connects strategy, web design, development, launch delivery, and ongoing support into one practical operating model.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html">Website Development</a></li>
+          <li><a href="services.html">Digital Strategy</a></li>
+          <li><a href="services.html">Web Design</a></li>
+          <li><a href="services.html">Support &amp; Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Communication via contact form only</li>
+          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

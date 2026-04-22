@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore ROUNDROCK COTTON s.r.o. services across marketing strategy, web design, frontend and backend development, launch support, and ongoing maintenance.">
+  <title>Services | ROUNDROCK COTTON s.r.o.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/bundle.css">
+  <link rel="stylesheet" href="css/pages/services.css">
+</head>
+<body data-page="services">
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-mark" href="index.html" aria-label="ROUNDROCK COTTON home">
+        <span class="brand-mark__glyph">RC</span>
+        <span class="brand-mark__text">
+          <strong>ROUNDROCK COTTON s.r.o.</strong>
+          <small>Marketing, Design &amp; Development</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-utility desktop-only" href="contact.html" aria-label="Open project contact panel" data-drawer-open>
+          <span class="header-utility__icon">
+            <i data-lucide="clipboard-pen-line"></i>
+          </span>
+          <span class="header-utility__text">
+            <small>Let’s Talk</small>
+            <strong>Start Your Project</strong>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay__backdrop" data-menu-close></div>
+    <div class="menu-overlay__panel">
+      <div class="menu-overlay__top">
+        <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
+        <button class="menu-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button>
+      </div>
+      <nav class="menu-overlay__nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="service-detail.html">Service Detail</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-overlay__footer">
+        <a class="btn btn--primary" href="contact.html">Send a Project Request</a>
+        <p>From strategy and websites to launch, support, and digital growth, every conversation starts through one clear project form.</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="contact-drawer" aria-hidden="true">
+    <div class="contact-drawer__backdrop" data-drawer-close></div>
+    <div class="contact-drawer__panel">
+      <div class="contact-drawer__top">
+        <div>
+          <p class="eyebrow">Let’s Talk</p>
+          <h2>Tell us what you have in mind.</h2>
+          <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
+        </div>
+        <button class="contact-drawer__close" type="button" aria-label="Close contact panel" data-drawer-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <ul class="contact-drawer__list">
+        <li><strong>Good fit for:</strong> new websites, redesigns, development work, launch support, and ongoing updates</li>
+        <li><strong>Best way to reach us:</strong> send the brief through the form and include as much context as you can</li>
+        <li><strong>What happens next:</strong> we review the request and come back with a clear next step</li>
+      </ul>
+      <div class="contact-drawer__actions">
+        <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
+        <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
+      </div>
+      <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
+      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidická 700/19<br>602 00 Brno, Czech Republic</p>
+    </div>
+  </aside>
+
+  <div class="contact-modal" aria-hidden="true">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle-services">
+      <div class="contact-modal__top">
+        <div>
+          <p class="eyebrow">Project Inquiry</p>
+          <h2 id="modalTitle-services">Tell us which part of the project needs the most attention.</h2>
+          <p>Use the form to outline the service mix, delivery need, or rebuild scope and we will review it with the right team.</p>
+        </div>
+        <button class="contact-modal__close" type="button" aria-label="Close contact form" data-modal-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <form class="contact-form" action="contact.php" method="post">
+        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
+        <label><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
+        <label>
+          <span>Service interest</span>
+          <select name="service">
+            <option value="">Select a focus area</option>
+            <option>Digital Strategy</option>
+            <option>Performance Marketing</option>
+            <option>Web Design</option>
+            <option>Website Development</option>
+            <option>Frontend Development</option>
+            <option>Backend Development</option>
+            <option>Landing Page Design</option>
+            <option>Support &amp; Maintenance</option>
+            <option>Full-Cycle Delivery</option>
+          </select>
+        </label>
+        <label>
+          <span>Budget range</span>
+          <select name="budget">
+            <option value="">Select a range</option>
+            <option>$5k - $15k</option>
+            <option>$15k - $35k</option>
+            <option>$35k - $75k</option>
+            <option>$75k+</option>
+          </select>
+        </label>
+        <label class="contact-form__full"><span>Project details</span><textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea></label>
+        <input type="hidden" name="return_to" value="services.html">
+        <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--primary" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero--services scene-section">
+      <div class="container page-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow reveal" data-reveal="fade-up">Service architecture</p>
+          <h1 class="split-text">The full digital service stack, structured across strategy, design, development, launch, and support.</h1>
+          <p class="reveal" data-reveal="fade-up">
+            ROUNDROCK COTTON s.r.o. is built for companies that want one partner across digital planning, website creation, development, and long-term support. Every service is structured to connect with the rest of the delivery process.
+          </p>
+        </div>
+        <div class="page-hero__panel reveal" data-reveal="fade-left">
+          <h2>How we scope work</h2>
+          <p>Some clients need a new website. Others need design systems, development help, support after launch, or marketing services around the product. We scope around leverage and delivery practicality.</p>
+          <ul>
+            <li>Discovery and planning engagements</li>
+            <li>Design and development delivery for new sites or rebuilds</li>
+            <li>Ongoing support, updates, and marketing continuity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-ribbon scene-section">
+      <div class="container category-ribbon__inner reveal" data-reveal="fade-up">
+        <span>Strategy</span>
+        <span>Marketing</span>
+        <span>Design</span>
+        <span>Development</span>
+        <span>Support</span>
+      </div>
+    </section>
+
+    <section class="service-ledger scene-section">
+      <div class="container">
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>01</span>
+            <h2>Digital Strategy</h2>
+            <p class="service-row__summary">Clarify positioning, audience priorities, offer architecture, and messaging before growth efforts are scaled.</p>
+            <a class="text-link" href="contact.html">Request a project strategy session</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Reduces confusion across campaigns, sales conversations, landing pages, and content so the market understands why the brand is worth choosing.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Positioning and category review</li>
+                <li>Audience segments and buying triggers</li>
+                <li>Offer structure, proof hierarchy, and messaging pillars</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Brands preparing to scale spend, reposition their offer, or fix poor conversion caused by weak differentiation.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Sharper message-market fit, stronger campaign consistency, and faster creative approval because the strategic direction is clearer.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row service-row--media reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>02</span>
+            <h2>Performance Marketing</h2>
+            <p class="service-row__summary">Campaign strategy and channel orchestration that turns budget into qualified demand instead of vanity metrics.</p>
+            <a class="text-link" href="service-detail.html">View service detail</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Improves acquisition efficiency through stronger account structure, better test design, and tighter links between media, offer, and page experience.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Channel strategy and budget allocation</li>
+                <li>Campaign build, creative testing, and pacing logic</li>
+                <li>Performance reviews with decision-ready recommendations</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Companies with active media spend that need more profitable scale, cleaner account structure, or stronger lead quality.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Lower acquisition waste, faster learning cycles, improved signal quality, and better coordination with landing pages and sales.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>03</span>
+            <h2>Paid Social Campaigns</h2>
+            <p class="service-row__summary">Meta, LinkedIn, TikTok, and channel-specific social campaigns built around message testing, demand capture, and creative velocity.</p>
+            <a class="text-link" href="contact.html">Launch social campaigns</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Creates a reliable testing environment for hooks, offers, formats, and audience angles while keeping performance grounded in business outcomes.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Campaign concepts and ad set architecture</li>
+                <li>Creative briefing, iteration plan, and reporting</li>
+                <li>Audience segmentation and retargeting flows</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Brands that need demand generation, remarketing, or more disciplined creative testing across social platforms.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Higher-quality engagement, clearer creative learnings, better retargeting performance, and steadier lead or sales flow.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>04</span>
+            <h2>Search Advertising</h2>
+            <p class="service-row__summary">Intent-led Google and Microsoft search campaigns designed around commercial keyword strategy, page alignment, and cost control.</p>
+            <a class="text-link" href="contact.html">Strengthen search demand capture</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Captures active intent with tighter query management, stronger copy angles, and landing pages matched to the actual search context.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Keyword and intent mapping</li>
+                <li>Campaign and ad group structure</li>
+                <li>Ad copy testing, negative keywords, and query reviews</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Businesses competing in valuable search categories where wasted spend or weak page alignment is eroding return.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Stronger lead intent, improved cost efficiency, and clearer visibility into which offer angles deserve more investment.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>05</span>
+            <h2>Landing Page Design</h2>
+            <p class="service-row__summary">Campaign-connected landing pages that translate attention into action with narrative clarity, proof sequencing, and focused conversion design.</p>
+            <a class="text-link" href="contact.html">Build a conversion page</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Increases the commercial return of paid and organic traffic by reducing friction, clarifying value, and strengthening trust signals.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Wireframes and offer narrative</li>
+                <li>Conversion-focused copy structure</li>
+                <li>Responsive design and handoff-ready UI system</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Launches, campaign-specific offers, service businesses, and brands with strong traffic but underperforming pages.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Higher inquiry or purchase rates, better message retention, and less disconnect between ads, page content, and next-step action.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>06</span>
+            <h2>Conversion Rate Optimization</h2>
+            <p class="service-row__summary">Structured experimentation to improve form completion, purchase intent, proposal requests, and other high-value actions.</p>
+            <a class="text-link" href="contact.html">Optimize the funnel</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Improves return on existing traffic by fixing friction, trust gaps, weak sequencing, or unclear calls to action across the user journey.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Page diagnostics and hypothesis development</li>
+                <li>Test roadmap, design changes, and copy variants</li>
+                <li>Analysis of conversion drivers by source and audience</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Businesses with meaningful traffic volumes that want better performance before increasing spend further.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Stronger lead quality, improved action rates, and more efficient use of existing acquisition channels.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>07</span>
+            <h2>Content Strategy</h2>
+            <p class="service-row__summary">A practical editorial system that supports brand positioning, paid amplification, retention touchpoints, and organic authority.</p>
+            <a class="text-link" href="contact.html">Plan the content engine</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Turns scattered content efforts into a coherent publishing plan that supports acquisition, nurture, and market education.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Editorial themes and campaign narratives</li>
+                <li>Funnel-stage content mapping</li>
+                <li>Content calendar and distribution guidance</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Teams producing content without a clear system, or brands that need more alignment between content and revenue goals.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Clearer editorial direction, stronger reuse across channels, and more consistent support for paid and owned media.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>08</span>
+            <h2>Creative Production</h2>
+            <p class="service-row__summary">Campaign-ready creative systems for paid media, web, email, and launch moments that need polish and commercial intent.</p>
+            <a class="text-link" href="contact.html">Produce campaign creative</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Improves conversion and consistency by treating creative as part of the growth system, not as isolated aesthetic output.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Concept direction and asset planning</li>
+                <li>Static, motion, and modular campaign creative</li>
+                <li>Format adaptations for channel requirements</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Brands that need stronger creative throughput, launch campaigns, or better visual consistency across paid and owned channels.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Higher creative testing velocity, better message retention, and more confident brand presentation across customer touchpoints.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>09</span>
+            <h2>Email Marketing Systems</h2>
+            <p class="service-row__summary">Lifecycle flows and campaign email structure that turn existing attention into repeat action, stronger retention, and better conversion support.</p>
+            <a class="text-link" href="contact.html">Build email systems</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Extracts more value from current traffic and customer interest while improving follow-up quality, nurture, and repeat purchase or inquiry behavior.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Lifecycle mapping and trigger design</li>
+                <li>Core automations and campaign framework</li>
+                <li>Message sequencing and creative templates</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Brands with list growth but weak nurture performance, or businesses that need more reliable follow-up after paid acquisition.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>More conversions from existing interest, healthier retention activity, and a stronger bridge between first click and second action.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>10</span>
+            <h2>Analytics &amp; Reporting</h2>
+            <p class="service-row__summary">Measurement design and reporting frameworks that help teams make sharper strategic and budget decisions.</p>
+            <a class="text-link" href="contact.html">Improve reporting clarity</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Creates shared clarity across leadership, marketing, and sales so growth decisions are not driven by fragmented platform snapshots.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Tracking review and KPI framework</li>
+                <li>Executive dashboards and weekly summaries</li>
+                <li>Insight interpretation tied to action planning</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Teams that have data but not usable visibility, or companies that need sharper accountability across multiple growth channels.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Better budget confidence, faster prioritization, stronger cross-functional alignment, and cleaner performance narratives for leadership.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>11</span>
+            <h2>Web Design</h2>
+            <p class="service-row__summary">User-focused interface design for company websites, landing pages, and digital products that need a clear visual system and stronger usability.</p>
+            <a class="text-link" href="contact.html">Plan a web design project</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Gives the company a stronger visual presence, more understandable page hierarchy, and a cleaner user path across key screens.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Wireframes and interface direction</li>
+                <li>Responsive page layouts and UI components</li>
+                <li>Design system guidance for implementation</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Companies launching a new site, rebuilding an outdated interface, or improving conversion and readability through better design.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>A clearer digital identity, better content structure, and a more implementation-ready foundation for development.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>12</span>
+            <h2>Website Development</h2>
+            <p class="service-row__summary">Full website implementation covering frontend structure, backend logic, responsive behavior, and production launch readiness.</p>
+            <a class="text-link" href="service-detail.html">View service detail</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Transforms approved concepts into a stable, maintainable product that performs well across devices and supports ongoing updates.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Frontend development and responsive implementation</li>
+                <li>Backend features, forms, and content workflows</li>
+                <li>Technical QA and launch preparation</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Companies that need a reliable build partner for a new site, redesign rollout, or functional upgrade.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>A production-ready website with cleaner code structure, stronger usability, and fewer delivery gaps between design and launch.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>13</span>
+            <h2>Frontend &amp; Backend Development</h2>
+            <p class="service-row__summary">Focused engineering support for businesses that need custom interfaces, integrations, admin features, or more reliable technical architecture.</p>
+            <a class="text-link" href="contact.html">Scope engineering support</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Helps the product scale more cleanly by improving the technical foundation behind public pages, forms, and internal workflows.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Frontend component work and UI logic</li>
+                <li>Backend functionality and data handling</li>
+                <li>Technical problem-solving for custom requirements</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Projects that need more than template assembly and require custom features, integrations, or structured development support.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>Cleaner technical delivery, fewer workarounds, and a product that is easier to maintain after launch.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reveal" data-reveal="fade-up">
+          <div class="service-row__meta">
+            <span>14</span>
+            <h2>Support &amp; Maintenance</h2>
+            <p class="service-row__summary">Ongoing updates, fixes, monitoring, content changes, and practical technical support after the initial release.</p>
+            <a class="text-link" href="contact.html">Arrange ongoing support</a>
+          </div>
+          <div class="service-row__content">
+            <div>
+              <h3>Business value</h3>
+              <p>Protects the site after launch by making sure improvements, fixes, and essential changes do not stall once the build is complete.</p>
+            </div>
+            <div>
+              <h3>What is included</h3>
+              <ul>
+                <li>Technical fixes and content updates</li>
+                <li>Post-launch improvements and small feature work</li>
+                <li>Maintenance planning and support continuity</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Best for</h3>
+              <p>Companies that want a stable long-term partner after launch instead of managing every change request ad hoc.</p>
+            </div>
+            <div>
+              <h3>Expected outcomes</h3>
+              <p>More reliable site performance, faster response to change requests, and less operational friction after release.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="services-process scene-section">
+      <div class="container services-process__grid">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">How services are applied</p>
+          <h2>We stack services around delivery leverage, not around arbitrary retainers.</h2>
+        </div>
+        <article class="process-note reveal" data-reveal="fade-up">
+          <h3>Discovery and planning</h3>
+          <p>For companies that need to define the structure, requirements, and digital direction before production begins.</p>
+        </article>
+        <article class="process-note reveal" data-reveal="fade-up">
+          <h3>Design and build engagements</h3>
+          <p>For new websites, redesigns, and delivery phases that require design quality and implementation discipline together.</p>
+        </article>
+        <article class="process-note reveal" data-reveal="fade-up">
+          <h3>Launch and support partnership</h3>
+          <p>For businesses that want continued fixes, updates, and digital support after the product goes live.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-banner scene-section">
+      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
+        <p class="eyebrow">Need the right mix, not every service at once?</p>
+        <h2>We scope for what needs to happen first, then build the right delivery path from design through launch.</h2>
+        <p>Tell us whether you need a new website, a redesign, engineering support, marketing help, or maintenance after launch. We will shape the right engagement path.</p>
+        <a class="btn btn--primary" href="contact.html">Discuss your scope</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark brand-mark--footer" href="index.html">
+          <span class="brand-mark__glyph">RC</span>
+          <span class="brand-mark__text">
+            <strong>ROUNDROCK COTTON s.r.o.</strong>
+            <small>Full-cycle digital delivery for modern companies.</small>
+          </span>
+        </a>
+        <p class="footer-note">ROUNDROCK COTTON s.r.o. connects strategy, web design, development, launch delivery, and ongoing support into one practical operating model.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html">Website Development</a></li>
+          <li><a href="services.html">Digital Strategy</a></li>
+          <li><a href="services.html">Web Design</a></li>
+          <li><a href="services.html">Support &amp; Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Communication via contact form only</li>
+          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

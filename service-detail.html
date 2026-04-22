@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed breakdown of ROUNDROCK COTTON s.r.o.'s website development service, including deliverables, process, outcomes, fit, and FAQs.">
+  <title>Website Development | ROUNDROCK COTTON s.r.o.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/bundle.css">
+  <link rel="stylesheet" href="css/pages/service.css">
+</head>
+<body data-page="service-detail">
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-mark" href="index.html" aria-label="ROUNDROCK COTTON home">
+        <span class="brand-mark__glyph">RC</span>
+        <span class="brand-mark__text">
+          <strong>ROUNDROCK COTTON s.r.o.</strong>
+          <small>Marketing, Design &amp; Development</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-utility desktop-only" href="contact.html" aria-label="Open project contact panel" data-drawer-open>
+          <span class="header-utility__icon">
+            <i data-lucide="clipboard-pen-line"></i>
+          </span>
+          <span class="header-utility__text">
+            <small>Let’s Talk</small>
+            <strong>Start Your Project</strong>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay__backdrop" data-menu-close></div>
+    <div class="menu-overlay__panel">
+      <div class="menu-overlay__top">
+        <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
+        <button class="menu-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button>
+      </div>
+      <nav class="menu-overlay__nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="service-detail.html">Service Detail</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-overlay__footer">
+        <a class="btn btn--primary" href="contact.html">Send a Project Request</a>
+        <p>From strategy and websites to launch, support, and digital growth, every conversation starts through one clear project form.</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="contact-drawer" aria-hidden="true">
+    <div class="contact-drawer__backdrop" data-drawer-close></div>
+    <div class="contact-drawer__panel">
+      <div class="contact-drawer__top">
+        <div>
+          <p class="eyebrow">Let’s Talk</p>
+          <h2>Tell us what you have in mind.</h2>
+          <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
+        </div>
+        <button class="contact-drawer__close" type="button" aria-label="Close contact panel" data-drawer-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <ul class="contact-drawer__list">
+        <li><strong>Good fit for:</strong> new websites, redesigns, development work, launch support, and ongoing updates</li>
+        <li><strong>Best way to reach us:</strong> send the brief through the form and include as much context as you can</li>
+        <li><strong>What happens next:</strong> we review the request and come back with a clear next step</li>
+      </ul>
+      <div class="contact-drawer__actions">
+        <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
+        <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
+      </div>
+      <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
+      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidická 700/19<br>602 00 Brno, Czech Republic</p>
+    </div>
+  </aside>
+
+  <div class="contact-modal" aria-hidden="true">
+    <div class="contact-modal__backdrop" data-modal-close></div>
+    <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle-service">
+      <div class="contact-modal__top">
+        <div>
+          <p class="eyebrow">Project Inquiry</p>
+          <h2 id="modalTitle-service">Tell us about the build, rebuild, or rollout you need help with.</h2>
+          <p>Share the current state of the project and we will review where development, design, or support should start first.</p>
+        </div>
+        <button class="contact-modal__close" type="button" aria-label="Close contact form" data-modal-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <form class="contact-form" action="contact.php" method="post">
+        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
+        <label><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
+        <label>
+          <span>Service interest</span>
+          <select name="service">
+            <option value="">Select a focus area</option>
+            <option>Digital Strategy</option>
+            <option>Performance Marketing</option>
+            <option>Web Design</option>
+            <option>Website Development</option>
+            <option>Frontend Development</option>
+            <option>Backend Development</option>
+            <option>Landing Page Design</option>
+            <option>Support &amp; Maintenance</option>
+            <option>Full-Cycle Delivery</option>
+          </select>
+        </label>
+        <label>
+          <span>Budget range</span>
+          <select name="budget">
+            <option value="">Select a range</option>
+            <option>$5k - $15k</option>
+            <option>$15k - $35k</option>
+            <option>$35k - $75k</option>
+            <option>$75k+</option>
+          </select>
+        </label>
+        <label class="contact-form__full"><span>Project details</span><textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea></label>
+        <input type="hidden" name="return_to" value="service-detail.html">
+        <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--primary" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero--service scene-section">
+      <div class="container service-hero">
+        <div class="service-hero__copy">
+          <p class="eyebrow reveal" data-reveal="fade-up">Service detail | Website Development</p>
+          <h1 class="split-text">Website development that turns approved strategy and design into a stable, launch-ready product.</h1>
+          <p class="reveal" data-reveal="fade-up">
+            This service is built for companies that need more than a design mockup. We translate structure, interface decisions, and business requirements into production-ready frontend and backend delivery.
+          </p>
+          <div class="hero-actions reveal" data-reveal="fade-up">
+            <a class="btn btn--primary" href="contact.html">Discuss this service</a>
+            <a class="btn btn--secondary" href="services.html">Back to all services</a>
+          </div>
+        </div>
+        <div class="service-hero__panel reveal" data-reveal="fade-left">
+          <h2>Service snapshot</h2>
+          <ul>
+            <li><strong>For:</strong> companies launching or rebuilding a website or digital platform</li>
+            <li><strong>Includes:</strong> frontend, backend, QA, launch preparation, and implementation guidance</li>
+            <li><strong>Primary goal:</strong> deliver a reliable product that is easier to launch and maintain</li>
+            <li><strong>CTA:</strong> Request a development review</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-summary scene-section">
+      <div class="container service-summary__grid">
+        <article class="summary-card reveal" data-reveal="fade-up">
+          <h2>What this service solves</h2>
+          <p>Website projects often stall because design and development are misaligned, requirements shift too late, responsive behavior is treated as cleanup, or launch support arrives too late. We solve for delivery quality, not just code output.</p>
+        </article>
+        <article class="summary-card reveal" data-reveal="fade-up">
+          <h2>Real business value</h2>
+          <p>A cleaner build process, better implementation consistency, stronger launch readiness, and a website foundation that can keep evolving after release.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-includes scene-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">What is included</p>
+          <h2>A complete implementation layer for web delivery rather than isolated coding support.</h2>
+        </div>
+        <div class="includes-grid">
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>Technical planning</h3>
+            <p>Clarification of structure, functionality, responsive rules, and implementation requirements before build work accelerates.</p>
+          </article>
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>Frontend implementation</h3>
+            <p>Responsive page development, reusable components, interaction handling, and clean structure across key templates.</p>
+          </article>
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>Backend development</h3>
+            <p>Forms, content handling, custom logic, integrations, and practical administration features where the project requires them.</p>
+          </article>
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>Design alignment</h3>
+            <p>Close translation of approved design decisions into a usable build without losing spacing, hierarchy, and page logic.</p>
+          </article>
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>QA and launch preparation</h3>
+            <p>Cross-device review, form testing, final adjustments, and deployment preparation before the website goes live.</p>
+          </article>
+          <article class="includes-card reveal" data-reveal="fade-up">
+            <h3>Post-launch support</h3>
+            <p>Fixes, refinements, and technical support after release so the site can keep improving once real use begins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section scene-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">Approach</p>
+          <h2>We move through five deliberate stages so design intent, build quality, and launch readiness stay aligned.</h2>
+        </div>
+        <div class="approach-timeline">
+          <article class="approach-step reveal" data-reveal="fade-up">
+            <span>01</span>
+            <h3>Requirements review</h3>
+            <p>Review approved scope, design files, content structure, technical needs, and launch expectations.</p>
+          </article>
+          <article class="approach-step reveal" data-reveal="fade-up">
+            <span>02</span>
+            <h3>Implementation blueprint</h3>
+            <p>Define templates, component structure, functionality, and development priorities before coding begins in full.</p>
+          </article>
+          <article class="approach-step reveal" data-reveal="fade-up">
+            <span>03</span>
+            <h3>Build phase</h3>
+            <p>Develop frontend and backend functionality with regular review checkpoints and practical iteration.</p>
+          </article>
+          <article class="approach-step reveal" data-reveal="fade-up">
+            <span>04</span>
+            <h3>QA and launch prep</h3>
+            <p>Review responsive behavior, forms, content, and edge cases before the release process starts.</p>
+          </article>
+          <article class="approach-step reveal" data-reveal="fade-up">
+            <span>05</span>
+            <h3>Release and support</h3>
+            <p>Deploy the site, resolve launch issues, and maintain a support path for the next round of improvements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="deliverables-section scene-section">
+      <div class="container deliverables-grid">
+        <div class="deliverables-panel reveal" data-reveal="fade-right">
+          <p class="eyebrow">Deliverables</p>
+          <h2>What clients actually receive.</h2>
+          <ul>
+            <li>Frontend page templates and responsive implementation</li>
+            <li>Backend features, forms, and logic where required</li>
+            <li>Technical QA pass and launch preparation checklist</li>
+            <li>Implementation notes for content and future updates</li>
+            <li>Post-launch support path for fixes and refinements</li>
+          </ul>
+        </div>
+        <div class="deliverables-panel reveal" data-reveal="fade-left">
+          <p class="eyebrow">Best fit</p>
+          <h2>Who this is for.</h2>
+          <ul>
+            <li>Companies launching a new site or rebuilding an outdated one</li>
+            <li>Teams that already have design direction and need reliable implementation</li>
+            <li>Businesses that need frontend, backend, and launch support in one scope</li>
+            <li>Projects that require practical support after release, not just handoff</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-section scene-section">
+      <div class="container impact-grid">
+        <article class="impact-card reveal" data-reveal="fade-up">
+          <span>Expected impact</span>
+          <h3>Smoother delivery</h3>
+          <p>Less friction between design and implementation and fewer surprises close to launch.</p>
+        </article>
+        <article class="impact-card reveal" data-reveal="fade-up">
+          <span>Expected impact</span>
+          <h3>Stronger launch readiness</h3>
+          <p>Better testing, more predictable rollout, and fewer unresolved issues at the moment of release.</p>
+        </article>
+        <article class="impact-card reveal" data-reveal="fade-up">
+          <span>Expected impact</span>
+          <h3>Better maintainability</h3>
+          <p>A cleaner foundation for updates, content changes, and future feature work after the site is live.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section scene-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal="fade-up">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions before a performance engagement begins.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item reveal" data-reveal="fade-up">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Do you work only on large website builds?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. We can support smaller focused builds, section rebuilds, and larger custom website projects. The right fit depends more on clarity of scope and delivery readiness than on raw size.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal" data-reveal="fade-up">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Can you support design and development as part of the same engagement?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. That is one of our core strengths. We often support the design direction, implementation, launch preparation, and post-launch fixes in one coordinated project.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal" data-reveal="fade-up">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>What if the design is ready but the technical requirements are still evolving?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We address that early through requirements review, implementation planning, and staged priorities. It is better to resolve technical uncertainty before the build gets too deep.</p>
+            </div>
+          </article>
+          <article class="faq-item reveal" data-reveal="fade-up">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Is this only a build service or can it include support after launch?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>It can absolutely include support after launch. Many clients keep us involved for fixes, updates, and additional development once the first version is live.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner scene-section">
+      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
+        <p class="eyebrow">Next step</p>
+        <h2>Send the project brief and we will show you where design, development, or launch support should begin first.</h2>
+        <p>Bring the current challenge, the rebuild scope, or the launch deadline. We will translate it into a more practical delivery path.</p>
+        <a class="btn btn--primary" href="contact.html">Request a development review</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark brand-mark--footer" href="index.html">
+          <span class="brand-mark__glyph">RC</span>
+          <span class="brand-mark__text">
+            <strong>ROUNDROCK COTTON s.r.o.</strong>
+            <small>Full-cycle digital delivery for modern companies.</small>
+          </span>
+        </a>
+        <p class="footer-note">ROUNDROCK COTTON s.r.o. connects strategy, web design, development, launch delivery, and ongoing support into one practical operating model.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="service-detail.html">Website Development</a></li>
+          <li><a href="services.html">Digital Strategy</a></li>
+          <li><a href="services.html">Web Design</a></li>
+          <li><a href="services.html">Support &amp; Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Communication via contact form only</li>
+          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
