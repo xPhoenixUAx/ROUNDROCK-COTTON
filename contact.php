@@ -12,7 +12,7 @@ $returnTo = trim((string) ($_POST['return_to'] ?? ''));
 if ($returnTo !== '' && preg_match('/^[a-zA-Z0-9._\-\/]+$/', $returnTo) === 1) {
     $redirectBase = $returnTo;
 }
-$recipientEmail = 'support@roundrockcotton.com';
+$recipientEmail = 'support@roundrockagency.com';
 $recipientName = 'ROUNDROCK COTTON s.r.o.';
 
 $name = trim((string) ($_POST['name'] ?? ''));

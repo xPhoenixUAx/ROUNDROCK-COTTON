@@ -311,6 +311,221 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   };
 
+  const initCookieConsent = () => {
+    const storageKey = "rr_cookie_consent_v1";
+
+    const readPreferences = () => {
+      try {
+        const raw = window.localStorage.getItem(storageKey);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        return {
+          essential: true,
+          analytics: Boolean(parsed.analytics),
+          marketing: Boolean(parsed.marketing),
+          updatedAt: parsed.updatedAt || null
+        };
+      } catch (error) {
+        return null;
+      }
+    };
+
+    const applyPreferences = (preferences) => {
+      body.dataset.cookieAnalytics = String(Boolean(preferences.analytics));
+      body.dataset.cookieMarketing = String(Boolean(preferences.marketing));
+
+      window.dispatchEvent(
+        new CustomEvent("cookieconsentchange", {
+          detail: preferences
+        })
+      );
+    };
+
+    const savePreferences = (preferences) => {
+      const payload = {
+        essential: true,
+        analytics: Boolean(preferences.analytics),
+        marketing: Boolean(preferences.marketing),
+        updatedAt: new Date().toISOString()
+      };
+
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify(payload));
+      } catch (error) {
+        // Ignore storage errors and still apply the current choice for the session.
+      }
+
+      applyPreferences(payload);
+      return payload;
+    };
+
+    const root = document.createElement("div");
+    root.className = "cookie-consent";
+    root.setAttribute("aria-hidden", "true");
+    root.innerHTML = `
+      <div class="cookie-consent__overlay" data-cookie-close></div>
+      <div class="cookie-consent__banner" role="dialog" aria-modal="false" aria-labelledby="cookieBannerTitle">
+        <p class="cookie-consent__eyebrow">Cookie Settings</p>
+        <h2 id="cookieBannerTitle">We use cookies to keep the site useful and measure what is working.</h2>
+        <p class="cookie-consent__text">Essential cookies keep the site functional. With your permission, we also use analytics and marketing cookies to understand performance and improve campaigns. Read more in our <a href="cookies.html">Cookie Policy</a>.</p>
+        <div class="cookie-consent__actions">
+          <button class="cookie-consent__button cookie-consent__button--ghost" type="button" data-cookie-reject>Reject optional</button>
+          <button class="cookie-consent__button cookie-consent__button--secondary" type="button" data-cookie-manage>Manage choices</button>
+          <button class="cookie-consent__button cookie-consent__button--primary" type="button" data-cookie-accept>Accept all</button>
+        </div>
+      </div>
+      <div class="cookie-consent__panel" role="dialog" aria-modal="true" aria-labelledby="cookiePanelTitle" hidden>
+        <div class="cookie-consent__panel-top">
+          <div>
+            <p class="cookie-consent__eyebrow">Cookie Preferences</p>
+            <h2 id="cookiePanelTitle">Choose which cookies you want to allow.</h2>
+          </div>
+          <button class="cookie-consent__close" type="button" aria-label="Close cookie preferences" data-cookie-close>&times;</button>
+        </div>
+        <p class="cookie-consent__text">You can update these choices at any time. Essential cookies stay enabled because the website depends on them to work correctly.</p>
+        <div class="cookie-consent__options">
+          <label class="cookie-option">
+            <span class="cookie-option__copy">
+              <strong>Essential cookies</strong>
+              <small>Required for security, navigation, and form delivery.</small>
+            </span>
+            <span class="cookie-option__switch">
+              <input type="checkbox" checked disabled>
+              <span></span>
+            </span>
+          </label>
+          <label class="cookie-option">
+            <span class="cookie-option__copy">
+              <strong>Analytics cookies</strong>
+              <small>Help us understand visits, page usage, and website performance.</small>
+            </span>
+            <span class="cookie-option__switch">
+              <input type="checkbox" data-cookie-analytics>
+              <span></span>
+            </span>
+          </label>
+          <label class="cookie-option">
+            <span class="cookie-option__copy">
+              <strong>Marketing cookies</strong>
+              <small>Support campaign measurement, ad attribution, and remarketing.</small>
+            </span>
+            <span class="cookie-option__switch">
+              <input type="checkbox" data-cookie-marketing>
+              <span></span>
+            </span>
+          </label>
+        </div>
+        <div class="cookie-consent__panel-actions">
+          <button class="cookie-consent__button cookie-consent__button--ghost" type="button" data-cookie-reject-panel>Reject optional</button>
+          <button class="cookie-consent__button cookie-consent__button--secondary" type="button" data-cookie-save>Save preferences</button>
+          <button class="cookie-consent__button cookie-consent__button--primary" type="button" data-cookie-accept-panel>Accept all</button>
+        </div>
+      </div>
+    `;
+
+    body.appendChild(root);
+
+    const banner = root.querySelector(".cookie-consent__banner");
+    const panel = root.querySelector(".cookie-consent__panel");
+    const analyticsToggle = root.querySelector("[data-cookie-analytics]");
+    const marketingToggle = root.querySelector("[data-cookie-marketing]");
+    const footerLinks = document.querySelectorAll(".footer-bottom div");
+
+    footerLinks.forEach((group) => {
+      if (group.querySelector("[data-cookie-open]")) return;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "footer-cookie-link";
+      button.dataset.cookieOpen = "true";
+      button.textContent = "Cookie Settings";
+      group.appendChild(button);
+    });
+
+    let preferences = readPreferences();
+
+    const syncInputs = () => {
+      analyticsToggle.checked = Boolean(preferences?.analytics);
+      marketingToggle.checked = Boolean(preferences?.marketing);
+    };
+
+    const showBanner = () => {
+      root.classList.add("is-visible");
+      root.classList.remove("is-settings-open");
+      root.setAttribute("aria-hidden", "false");
+      banner.hidden = false;
+      panel.hidden = true;
+    };
+
+    const openPanel = () => {
+      root.classList.add("is-visible", "is-settings-open");
+      root.setAttribute("aria-hidden", "false");
+      banner.hidden = true;
+      panel.hidden = false;
+      syncInputs();
+    };
+
+    const closeConsentUi = (hasSavedPreferences = Boolean(preferences)) => {
+      root.classList.remove("is-settings-open");
+      panel.hidden = true;
+
+      if (hasSavedPreferences) {
+        root.classList.remove("is-visible");
+        root.setAttribute("aria-hidden", "true");
+        banner.hidden = false;
+        return;
+      }
+
+      banner.hidden = false;
+      root.classList.add("is-visible");
+      root.setAttribute("aria-hidden", "false");
+    };
+
+    const acceptAll = () => {
+      preferences = savePreferences({ analytics: true, marketing: true });
+      closeConsentUi(true);
+    };
+
+    const rejectOptional = () => {
+      preferences = savePreferences({ analytics: false, marketing: false });
+      closeConsentUi(true);
+    };
+
+    const saveFromPanel = () => {
+      preferences = savePreferences({
+        analytics: analyticsToggle.checked,
+        marketing: marketingToggle.checked
+      });
+      closeConsentUi(true);
+    };
+
+    root.querySelector("[data-cookie-accept]")?.addEventListener("click", acceptAll);
+    root.querySelector("[data-cookie-accept-panel]")?.addEventListener("click", acceptAll);
+    root.querySelector("[data-cookie-reject]")?.addEventListener("click", rejectOptional);
+    root.querySelector("[data-cookie-reject-panel]")?.addEventListener("click", rejectOptional);
+    root.querySelector("[data-cookie-manage]")?.addEventListener("click", openPanel);
+    root.querySelector("[data-cookie-save]")?.addEventListener("click", saveFromPanel);
+    root.querySelectorAll("[data-cookie-close]")?.forEach((button) => {
+      button.addEventListener("click", closeConsentUi);
+    });
+
+    document.querySelectorAll("[data-cookie-open]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        openPanel();
+      });
+    });
+
+    if (preferences) {
+      applyPreferences(preferences);
+      root.classList.remove("is-visible");
+      root.setAttribute("aria-hidden", "true");
+      banner.hidden = false;
+      panel.hidden = true;
+    } else {
+      showBanner();
+    }
+  };
+
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = new Date().getFullYear();
   });
@@ -325,6 +540,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initCountups();
   initTestimonials();
+  initCookieConsent();
 
   if (window.lucide) {
     window.lucide.createIcons();
