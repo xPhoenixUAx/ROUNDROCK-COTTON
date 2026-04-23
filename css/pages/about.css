@@ -475,6 +475,57 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .page-hero--about {
+    padding-top: calc(var(--header-height) + 3.6rem);
+    padding-bottom: 3.8rem;
+  }
+
+  .about-hero__copy {
+    max-width: 42rem;
+  }
+
+  .about-hero__copy h1 {
+    font-size: clamp(2.55rem, 6vw, 3.45rem);
+  }
+
+  .credibility-section {
+    padding-top: 3rem;
+  }
+
+  .credibility-grid {
+    gap: 1.8rem;
+  }
+
+  .credibility-review {
+    gap: 1.7rem;
+    padding: 1.6rem;
+    border-radius: 1.5rem;
+  }
+
+  .credibility-metric strong {
+    font-size: clamp(3.2rem, 10vw, 4.5rem);
+  }
+
+  .who-we-are__grid {
+    gap: 2rem;
+  }
+
+  .who-we-are__intro h2 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 5vw, 3.3rem);
+  }
+
+  .who-we-are__image-frame {
+    max-width: 26rem;
+    margin-inline: auto;
+  }
+
+  .who-we-are__content {
+    max-width: none;
+  }
+}
+
 @media (max-width: 720px) {
   .page-hero--about {
     min-height: 24rem;

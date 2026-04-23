@@ -311,6 +311,52 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .page-hero--contact {
+    padding-top: calc(var(--header-height) + 3.6rem);
+    padding-bottom: 3.8rem;
+  }
+
+  .contact-hero__copy {
+    max-width: 42rem;
+  }
+
+  .contact-hero__copy h1 {
+    font-size: clamp(2.55rem, 6vw, 3.45rem);
+  }
+
+  .contact-section {
+    padding-top: 3rem;
+  }
+
+  .contact-grid {
+    gap: 1.9rem;
+  }
+
+  .contact-form-panel {
+    padding: 1.7rem;
+    border-radius: 1.35rem;
+  }
+
+  .contact-content {
+    gap: 1.15rem;
+    padding-top: 0;
+  }
+
+  .contact-content h2 {
+    max-width: 12ch;
+    font-size: clamp(2.3rem, 5vw, 3rem);
+  }
+
+  .contact-content__lead {
+    max-width: none;
+  }
+
+  .contact-map {
+    height: 24rem;
+  }
+}
+
 @media (max-width: 720px) {
   .page-hero--contact {
     min-height: 24rem;
