@@ -311,6 +311,214 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   };
 
+  const initGsapMotion = () => {
+    if (!window.gsap) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return;
+
+    const { gsap } = window;
+    const ScrollTrigger = window.ScrollTrigger;
+
+    if (ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    gsap.defaults({
+      ease: "power2.out",
+      duration: 1
+    });
+
+    const heroTitle = document.querySelector(".split-text");
+    const heroCrumbs = document.querySelector(
+      ".hero-copy__lead, .service-hero__crumbs, .about-hero__crumbs, .contact-hero__crumbs, .legal-crumbs"
+    );
+    const heroLead = document.querySelector(
+      ".hero-copy__lead, .service-hero__copy > p.reveal, .about-hero__copy > p.reveal, .contact-hero__copy > p.reveal, .legal-meta"
+    );
+    const heroActions = document.querySelector(".hero-actions, .contact-form-panel");
+    const introTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    if (heroCrumbs) {
+      introTimeline.from(heroCrumbs, {
+        y: 18,
+        opacity: 0,
+        duration: 0.6
+      });
+    }
+
+    if (heroTitle) {
+      introTimeline.fromTo(
+        heroTitle,
+        {
+          autoAlpha: 0,
+          x: -34,
+          y: 18
+        },
+        {
+          autoAlpha: 1,
+          x: 0,
+          y: 0,
+          duration: 1
+        },
+        heroCrumbs ? "-=0.15" : 0
+      );
+    }
+
+    if (heroLead) {
+      introTimeline.fromTo(
+        heroLead,
+        {
+          autoAlpha: 0,
+          x: -20,
+          y: 16
+        },
+        {
+          autoAlpha: 1,
+          x: 0,
+          y: 0,
+          duration: 0.85
+        },
+        "-=0.45"
+      );
+    }
+
+    if (heroActions) {
+      introTimeline.fromTo(
+        heroActions,
+        {
+          autoAlpha: 0,
+          y: 20
+        },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.8
+        },
+        "-=0.45"
+      );
+    }
+
+    const heroMediaItems = gsap.utils.toArray(
+      ".hero-photo--left, .hero-photo--right, .service-hero__panel, .credibility-review, .who-we-are__media, .testimonials-section__visual"
+    );
+
+    heroMediaItems.forEach((node, index) => {
+      introTimeline.fromTo(
+        node,
+        {
+          autoAlpha: 0,
+          x: index % 2 === 0 ? -26 : 26,
+          y: 18
+        },
+        {
+          autoAlpha: 1,
+          x: 0,
+          y: 0,
+          duration: 0.95
+        },
+        "-=0.6"
+      );
+    });
+
+    const reservedNodes = new Set(
+      [heroCrumbs, heroLead, heroActions, heroTitle, ...heroMediaItems].filter(Boolean)
+    );
+
+    const revealNodes = gsap
+      .utils.toArray("[data-reveal]")
+      .filter((node) => !node.closest(".cookie-consent") && !reservedNodes.has(node));
+
+    revealNodes.forEach((node) => {
+      const revealType = node.dataset.reveal || "fade-up";
+      const vars = {
+        autoAlpha: 0,
+        duration: 0.95,
+        ease: "power2.out"
+      };
+
+      if (revealType === "fade-left") {
+        vars.x = 42;
+        vars.y = 0;
+      } else if (revealType === "fade-right") {
+        vars.x = -42;
+        vars.y = 0;
+      } else {
+        vars.x = 0;
+        vars.y = 34;
+      }
+
+      if (ScrollTrigger) {
+        gsap.fromTo(
+          node,
+          vars,
+          {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            clearProps: "transform,opacity,visibility",
+            scrollTrigger: {
+              trigger: node,
+              start: "top 88%",
+              once: true
+            }
+          }
+        );
+      } else {
+        gsap.fromTo(
+          node,
+          vars,
+          {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            clearProps: "transform,opacity,visibility"
+          }
+        );
+      }
+    });
+
+    const ornamental = gsap.utils.toArray(
+      ".hero-rings, .hero-grid-dots, .hero-dots--right, .hero-social, .hero-accent, .proof-band__orbit"
+    );
+
+    ornamental.forEach((node, index) => {
+      gsap.to(node, {
+        y: index % 2 === 0 ? -8 : 8,
+        x: index % 3 === 0 ? 4 : -4,
+        duration: 5.4 + index * 0.3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+    });
+
+    const ctaButtons = gsap.utils.toArray(".hero-cta, .pricing-card__cta, .contact-submit");
+    ctaButtons.forEach((button) => {
+      const icon = button.querySelector(
+        ".hero-cta__icon, .pricing-card__cta-icon, .contact-submit__icon"
+      );
+
+      button.addEventListener("mouseenter", () => {
+        gsap.to(button, { y: -2, duration: 0.22, ease: "power2.out" });
+        if (icon) {
+          gsap.to(icon, { x: 4, duration: 0.22, ease: "power2.out" });
+        }
+      });
+
+      button.addEventListener("mouseleave", () => {
+        gsap.to(button, { y: 0, duration: 0.22, ease: "power2.out" });
+        if (icon) {
+          gsap.to(icon, { x: 0, duration: 0.22, ease: "power2.out" });
+        }
+      });
+    });
+  };
+
   const initCookieConsent = () => {
     const storageKey = "rr_cookie_consent_v1";
 
@@ -540,6 +748,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initCountups();
   initTestimonials();
+  initGsapMotion();
   initCookieConsent();
 
   if (window.lucide) {

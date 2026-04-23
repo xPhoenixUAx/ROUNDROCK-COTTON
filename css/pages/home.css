@@ -107,6 +107,9 @@
 }
 
 .hero-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
@@ -119,7 +122,30 @@
   box-shadow: 0 12px 32px rgba(47, 103, 255, 0.2);
 }
 
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #f2b126;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-premium);
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  color: #121625;
+}
+
+.hero-cta:hover::before,
+.hero-cta:focus-visible::before {
+  transform: scaleX(1);
+}
+
 .hero-cta__icon {
+  position: relative;
+  z-index: 1;
   display: inline-grid;
   place-items: center;
   width: 2.9rem;
@@ -1423,6 +1449,9 @@
 }
 
 .pricing-card__cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -1442,10 +1471,24 @@
   transition:
     transform 220ms ease,
     box-shadow 220ms ease,
-    background-color 220ms ease;
+    color 220ms ease,
+    border-color 220ms ease;
+}
+
+.pricing-card__cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #f2b126;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-premium);
 }
 
 .pricing-card__cta-icon {
+  position: relative;
+  z-index: 1;
   display: inline-grid;
   place-items: center;
   width: 2.35rem;
@@ -1491,15 +1534,21 @@
 .pricing-card__cta:hover,
 .pricing-card__cta:focus-visible {
   transform: translateY(-2px);
-  background: rgba(47, 103, 255, 0.06);
+  color: #121625;
+  border-color: #f2b126;
   box-shadow: 0 12px 26px rgba(47, 103, 255, 0.14);
+}
+
+.pricing-card__cta:hover::before,
+.pricing-card__cta:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .pricing-card__cta:hover .pricing-card__cta-icon,
 .pricing-card__cta:focus-visible .pricing-card__cta-icon {
   transform: translateX(4px);
-  background: #2f67ff;
-  color: #ffffff;
+  background: #ffffff;
+  color: #121625;
 }
 
 .why-choose {

@@ -647,6 +647,9 @@ body.menu-open .menu-toggle span:last-child {
 }
 
 .cta-banner__action {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   gap: 1rem;
@@ -658,17 +661,35 @@ body.menu-open .menu-toggle span:last-child {
   font-size: 1rem;
   font-weight: 700;
   box-shadow: 0 18px 34px rgba(47, 103, 255, 0.2);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, color 220ms ease;
+}
+
+.cta-banner__action::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #f2b126;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-premium);
 }
 
 .cta-banner__action:hover,
 .cta-banner__action:focus-visible {
   transform: translateY(-2px);
-  background: #2157f0;
+  color: #121625;
   box-shadow: 0 22px 40px rgba(47, 103, 255, 0.26);
 }
 
+.cta-banner__action:hover::before,
+.cta-banner__action:focus-visible::before {
+  transform: scaleX(1);
+}
+
 .cta-banner__action-icon {
+  position: relative;
+  z-index: 1;
   display: inline-grid;
   place-items: center;
   width: 3rem;
@@ -682,6 +703,7 @@ body.menu-open .menu-toggle span:last-child {
 .cta-banner__action:hover .cta-banner__action-icon,
 .cta-banner__action:focus-visible .cta-banner__action-icon {
   transform: translateX(4px);
+  color: #121625;
 }
 
 .cta-banner__action-icon svg {
@@ -1383,6 +1405,9 @@ body.drawer-open {
 }
 
 .cookie-consent__button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1399,6 +1424,17 @@ body.drawer-open {
   cursor: pointer;
 }
 
+.cookie-consent__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #f2b126;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-premium);
+}
+
 .cookie-consent__button--primary {
   color: #fff;
   background: #2f67ff;
@@ -1406,7 +1442,12 @@ body.drawer-open {
 
 .cookie-consent__button--primary:hover,
 .cookie-consent__button--primary:focus-visible {
-  background: #2154e4;
+  color: #121625;
+}
+
+.cookie-consent__button--primary:hover::before,
+.cookie-consent__button--primary:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .cookie-consent__button--secondary {
