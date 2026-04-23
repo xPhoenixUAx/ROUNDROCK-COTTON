@@ -1,452 +1,834 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detailed breakdown of ROUNDROCK COTTON s.r.o.'s performance marketing service, including paid social, search advertising, landing page alignment, optimisation, reporting, deliverables, fit, and FAQs.">
-  <title>Performance Marketing | ROUNDROCK COTTON s.r.o.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/bundle.css">
-  <link rel="stylesheet" href="css/pages/service.css">
-</head>
-<body data-page="service-detail">
-  <div class="site-noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand-mark" href="index.html" aria-label="ROUNDROCK COTTON home">
-        <span class="brand-mark__glyph">RC</span>
-        <span class="brand-mark__text">
-          <strong>ROUNDROCK COTTON s.r.o.</strong>
-          <small>Marketing, Design &amp; Development</small>
-        </span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#services-preview">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-utility desktop-only" href="contact.html" aria-label="Open project contact panel" data-drawer-open>
-          <span class="header-utility__icon">
-            <i data-lucide="clipboard-pen-line"></i>
-          </span>
-          <span class="header-utility__text">
-            <small>Let’s Talk</small>
-            <strong>Start Your Project</strong>
-          </span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open navigation">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-overlay__backdrop" data-menu-close></div>
-    <div class="menu-overlay__panel">
-      <div class="menu-overlay__top">
-        <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
-        <button class="menu-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button>
-      </div>
-      <nav class="menu-overlay__nav" aria-label="Mobile navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#services-preview">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="menu-overlay__footer">
-        <a class="btn btn--primary" href="contact.html">Send a Project Request</a>
-        <p>From strategy and websites to launch, support, and digital growth, every conversation starts through one clear project form.</p>
-      </div>
-    </div>
-  </div>
-
-  <aside class="contact-drawer" aria-hidden="true">
-    <div class="contact-drawer__backdrop" data-drawer-close></div>
-    <div class="contact-drawer__panel">
-      <div class="contact-drawer__top">
-        <div>
-          <p class="eyebrow">Let’s Talk</p>
-          <h2>Tell us what you have in mind.</h2>
-          <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
-        </div>
-        <button class="contact-drawer__close" type="button" aria-label="Close contact panel" data-drawer-close>
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <ul class="contact-drawer__list">
-        <li><strong>Good fit for:</strong> new websites, redesigns, development work, launch support, and ongoing updates</li>
-        <li><strong>Best way to reach us:</strong> send the brief through the form and include as much context as you can</li>
-        <li><strong>What happens next:</strong> we review the request and come back with a clear next step</li>
-      </ul>
-      <div class="contact-drawer__actions">
-        <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
-        <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
-      </div>
-      <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
-      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidicka 700/19<br>602 00 Brno, Czech Republic</p>
-    </div>
-  </aside>
-
-  <div class="contact-modal" aria-hidden="true">
-    <div class="contact-modal__backdrop" data-modal-close></div>
-    <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle-service">
-      <div class="contact-modal__top">
-        <div>
-          <p class="eyebrow">Project Inquiry</p>
-          <h2 id="modalTitle-service">Tell us about the acquisition challenge or performance target you need help with.</h2>
-          <p>Share the current channel mix, spend level, or performance bottleneck and we will review where the work should start first.</p>
-        </div>
-        <button class="contact-modal__close" type="button" aria-label="Close contact form" data-modal-close>
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <form class="contact-form" action="contact.php" method="post">
-        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
-        <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
-        <label><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
-        <label>
-          <span>Service interest</span>
-          <select name="service">
-            <option value="">Select a focus area</option>
-            <option>Brand Strategy</option>
-            <option>Performance Marketing</option>
-            <option>Web Design</option>
-            <option>Development &amp; Support</option>
-            <option>Frontend Development</option>
-            <option>Backend Development</option>
-            <option>Landing Page Design</option>
-            <option>Support &amp; Maintenance</option>
-            <option>Full-Cycle Delivery</option>
-          </select>
-        </label>
-        <label>
-          <span>Budget range</span>
-          <select name="budget">
-            <option value="">Select a range</option>
-            <option>$5k - $15k</option>
-            <option>$15k - $35k</option>
-            <option>$35k - $75k</option>
-            <option>$75k+</option>
-          </select>
-        </label>
-        <label class="contact-form__full"><span>Project details</span><textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea></label>
-        <input type="hidden" name="return_to" value="performance-marketing.html">
-        <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--primary" type="submit">Send inquiry</button>
-      </form>
-    </div>
-  </div>
-
-  <main>
-    <section class="page-hero page-hero--service scene-section">
-      <div class="container service-hero">
-        <div class="service-hero__copy">
-          <p class="service-hero__crumbs reveal" data-reveal="fade-up">
-            <a href="index.html">Home</a>
-            <span>/</span>
-            <a href="index.html#services-preview">Services</a>
-            <span>/</span>
-            <span>Performance Marketing</span>
-          </p>
-          <p class="eyebrow reveal" data-reveal="fade-up">Service detail | Performance Marketing</p>
-          <h1 class="split-text">Performance Marketing</h1>
-          <p class="reveal" data-reveal="fade-up">
-            This service is built for companies that want tighter control over acquisition efficiency. We connect channel strategy, campaign structure, landing page alignment, testing, and reporting into one performance workflow.
-          </p>
-          <div class="hero-actions reveal" data-reveal="fade-up">
-            <a class="btn btn--primary" href="contact.html">Discuss this service</a>
-            <a class="btn btn--secondary" href="index.html#services-preview">Back to all services</a>
-          </div>
-        </div>
-        <div class="service-hero__panel reveal" data-reveal="fade-left">
-          <h2>Service snapshot</h2>
-          <ul>
-            <li><strong>For:</strong> businesses with active ad spend or upcoming acquisition goals that need more efficient demand generation</li>
-            <li><strong>Includes:</strong> paid social, search advertising, testing logic, landing page alignment, reporting, and optimisation</li>
-            <li><strong>Primary goal:</strong> reduce wasted spend and improve the quality of leads, demand, or sales generated from paid channels</li>
-            <li><strong>CTA:</strong> Request a performance review</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="service-layout scene-section">
-      <div class="container service-layout__grid">
-        <aside class="service-sidebar reveal" data-reveal="fade-right">
-          <nav class="service-detail-nav" aria-label="Service pages">
-            <a class="service-detail-nav__link" href="brand-strategy.html"><span>Brand Strategy</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link is-active" href="performance-marketing.html"><span>Performance Marketing</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link" href="web-design.html"><span>Web Design</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link" href="service-detail.html"><span>Development &amp; Support</span><i data-lucide="arrow-right"></i></a>
-          </nav>
-
-          <article class="service-sidebar__card">
-            <img src="img/home/ceo.webp" alt="ROUNDROCK COTTON project contact support">
-            <div class="service-sidebar__card-copy">
-              <p class="eyebrow">Project Desk</p>
-              <h3>Need a clearer starting point?</h3>
-              <p>Tell us what you are trying to scale, fix, or optimise and we will help define the next step through one structured project form.</p>
-              <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
-            </div>
-          </article>
-        </aside>
-
-        <div class="service-layout__content">
-          <article class="service-lead-card reveal" data-reveal="fade-up">
-            <div class="service-lead-card__media">
-              <img src="img/home/about-sec.webp" alt="Team reviewing campaign and reporting work together.">
-            </div>
-            <div class="service-lead-card__body">
-              <h2>Performance Marketing</h2>
-              <p>Performance marketing works best when media buying, message, landing-page experience, and reporting all feed the same commercial objective. It is not just about managing campaigns inside one platform.</p>
-              <p>For ROUNDROCK COTTON, this means shaping channel strategy, tightening paid social and search execution, improving page alignment, and keeping reporting close to real business decisions rather than vanity numbers.</p>
-            </div>
-          </article>
-
-          <section class="service-summary scene-section">
-            <div class="container service-summary__grid">
-              <article class="summary-card reveal" data-reveal="fade-up">
-                <h2>What this service solves</h2>
-                <p>Performance usually breaks down when channel setup, message, page experience, tracking, and reporting are treated as separate tasks. We solve for the full acquisition path, not just ad account activity.</p>
-              </article>
-              <article class="summary-card reveal" data-reveal="fade-up">
-                <h2>Real business value</h2>
-                <p>Lower acquisition waste, sharper test velocity, stronger lead quality, and cleaner reporting for both operators and decision-makers.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="service-includes scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">What is included</p>
-                <h2>A connected acquisition system rather than isolated channel management.</h2>
-              </div>
-              <div class="includes-grid">
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Paid social campaigns</h3>
-                  <p>Meta, LinkedIn, and platform-specific campaign structures built around audience testing, creative variation, and demand quality.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Search advertising</h3>
-                  <p>Intent-led campaign structure, keyword logic, ad copy direction, and query management focused on commercial relevance.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Landing page alignment</h3>
-                  <p>Recommendations for page structure, conversion flow, offer clarity, and ad-to-page continuity so paid traffic lands in the right context.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Testing and optimisation</h3>
-                  <p>Creative testing, audience iteration, bidding adjustments, and campaign refinement based on what performance data actually supports.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Tracking and reporting</h3>
-                  <p>Measurement review, KPI clarity, performance summaries, and reporting formats that support cleaner budget decisions.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Commercial insight loop</h3>
-                  <p>Decision-ready recommendations shaped around business outcomes, not vanity metrics or disconnected platform snapshots.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section class="approach-section scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">Approach</p>
-                <h2>We move through five practical stages so strategy, execution, and reporting stay tied to the same commercial goals.</h2>
-              </div>
-              <div class="approach-timeline">
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>01</span>
-                  <h3>Account and signal review</h3>
-                  <p>Review channels, spend allocation, existing campaigns, tracking quality, page alignment, and the biggest sources of current inefficiency.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>02</span>
-                  <h3>Channel plan</h3>
-                  <p>Define platform mix, campaign priorities, testing logic, budget direction, and what the first performance cycle should validate.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>03</span>
-                  <h3>Campaign build and activation</h3>
-                  <p>Launch the agreed structure across paid social, search, or both, with creative logic and page alignment already mapped to the offer.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>04</span>
-                  <h3>Test and optimise</h3>
-                  <p>Read the signals, refine creative and audiences, improve keyword quality, and tighten the spend against what is performing best.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>05</span>
-                  <h3>Report and prioritise</h3>
-                  <p>Turn campaign data into clear business recommendations so the next decisions on budget, offer, and page experience are easier to make.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section class="deliverables-section scene-section">
-            <div class="container deliverables-grid">
-              <div class="deliverables-panel reveal" data-reveal="fade-right">
-                <p class="eyebrow">Deliverables</p>
-                <h2>What clients actually receive.</h2>
-                <ul>
-                  <li>Channel strategy and campaign priority plan</li>
-                  <li>Paid social and search account structure guidance</li>
-                  <li>Creative and copy testing roadmap</li>
-                  <li>Landing page or conversion-flow recommendations</li>
-                  <li>Reporting format with actionable optimisation priorities</li>
-                </ul>
-              </div>
-              <div class="deliverables-panel reveal" data-reveal="fade-left">
-                <p class="eyebrow">Best fit</p>
-                <h2>Who this is for.</h2>
-                <ul>
-                  <li>Businesses already spending on acquisition and wanting cleaner scale</li>
-                  <li>Teams with underperforming paid channels or weak reporting clarity</li>
-                  <li>Brands launching new offers that need stronger paid demand capture</li>
-                  <li>Companies that need better alignment between ads, pages, and lead quality</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="impact-section scene-section">
-            <div class="container impact-grid">
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Lower waste</h3>
-                <p>Cleaner account structure and tighter optimisation reduce spend going to low-value traffic or weak demand.</p>
-              </article>
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Stronger lead quality</h3>
-                <p>Better channel-to-page alignment helps more of the right people reach the next step in the funnel.</p>
-              </article>
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Clearer budget decisions</h3>
-                <p>Better reporting and testing logic make it easier to know what deserves more spend and what needs to change.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="faq-section scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">FAQ</p>
-                <h2>Common questions before a performance marketing engagement begins.</h2>
-              </div>
-              <div class="faq-list">
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Can you work with existing ad accounts and campaign history?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>Yes. In many cases that is the fastest way to improve performance. We review what is already there, keep what is still useful, and restructure the parts that are holding efficiency back.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Do you only manage media, or do you also look at landing pages and conversion flow?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>We look at the full conversion path. Media performance is heavily affected by page structure, offer clarity, and tracking quality, so those areas are part of the review too.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Is this useful if we are already getting leads but the cost is too high?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>Yes. That is often the right moment. We look for wasted spend, weak segmentation, poor signal quality, and offer-to-page gaps that are inflating acquisition costs.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Can reporting be shaped for leadership, not just platform operators?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>Yes. We structure reporting so it can support both day-to-day optimisation and higher-level decisions on budget, channels, and growth priorities.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner scene-section">
-      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
-        <p class="eyebrow">Next step</p>
-        <h2>Send the account context, spend level, or demand challenge and we will show you where performance work should begin first.</h2>
-        <p>Bring the current campaigns, the reporting confusion, or the acquisition target. We will translate it into a clearer performance marketing path.</p>
-        <a class="btn btn--primary" href="contact.html">Request a performance review</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand-mark brand-mark--footer" href="index.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed breakdown of ROUNDROCK COTTON s.r.o.'s performance marketing service, including paid social, search advertising, landing page alignment, optimisation, reporting, deliverables, fit, and FAQs."
+    />
+    <title>Performance Marketing | ROUNDROCK COTTON s.r.o.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="img/common/favicon.svg" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bundle.css" />
+    <link rel="stylesheet" href="css/pages/service.css" />
+  </head>
+  <body data-page="service-detail">
+    <div class="site-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand-mark"
+          href="index.html"
+          aria-label="ROUNDROCK COTTON home"
+        >
           <span class="brand-mark__glyph">RC</span>
           <span class="brand-mark__text">
             <strong>ROUNDROCK COTTON s.r.o.</strong>
-            <small>Full-cycle digital delivery for modern companies.</small>
+            <small>Marketing, Design &amp; Development</small>
           </span>
         </a>
-        <p class="footer-note">ROUNDROCK COTTON s.r.o. connects strategy, web design, development, launch delivery, and ongoing support into one practical operating model.</p>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services-preview">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-utility desktop-only"
+            href="contact.html"
+            aria-label="Open project contact panel"
+            data-drawer-open
+          >
+            <span class="header-utility__icon">
+              <i data-lucide="clipboard-pen-line"></i>
+            </span>
+            <span class="header-utility__text">
+              <small>Let’s Talk</small>
+              <strong>Start Your Project</strong>
+            </span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menuOverlay"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services-preview">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Services</h3>
-        <ul>
-          <li><a href="brand-strategy.html">Brand Strategy</a></li>
-          <li><a href="performance-marketing.html">Performance Marketing</a></li>
-          <li><a href="web-design.html">Web Design</a></li>
-          <li><a href="service-detail.html">Development &amp; Support</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <li>Communication via contact form only</li>
-          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
-        </ul>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <div class="menu-overlay__backdrop" data-menu-close></div>
+      <div class="menu-overlay__panel">
+        <div class="menu-overlay__top">
+          <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation"
+            data-menu-close
+          >
+            &times;
+          </button>
+        </div>
+        <nav class="menu-overlay__nav" aria-label="Mobile navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services-preview">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-overlay__footer">
+          <a class="btn btn--primary" href="contact.html"
+            >Send a Project Request</a
+          >
+          <p>
+            From strategy and websites to launch, support, and digital growth,
+            every conversation starts through one clear project form.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
+
+    <aside class="contact-drawer" aria-hidden="true">
+      <div class="contact-drawer__backdrop" data-drawer-close></div>
+      <div class="contact-drawer__panel">
+        <div class="contact-drawer__top">
+          <div>
+            <p class="eyebrow">Let’s Talk</p>
+            <h2>Tell us what you have in mind.</h2>
+            <p>
+              Share the idea, the task, or the stage you are in, and we will
+              help you shape the right next step.
+            </p>
+          </div>
+          <button
+            class="contact-drawer__close"
+            type="button"
+            aria-label="Close contact panel"
+            data-drawer-close
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <ul class="contact-drawer__list">
+          <li>
+            <strong>Good fit for:</strong> new websites, redesigns, development
+            work, launch support, and ongoing updates
+          </li>
+          <li>
+            <strong>Best way to reach us:</strong> send the brief through the
+            form and include as much context as you can
+          </li>
+          <li>
+            <strong>What happens next:</strong> we review the request and come
+            back with a clear next step
+          </li>
+        </ul>
+        <div class="contact-drawer__actions">
+          <a class="btn btn--primary" href="contact.html" data-modal-open
+            >Start the Conversation</a
+          >
+          <a class="btn btn--secondary" href="contact.html"
+            >Go to Contact Page</a
+          >
+        </div>
+        <p class="contact-drawer__note">
+          We keep communication structured through the form so nothing important
+          gets lost in the first exchange.
+        </p>
+        <p class="contact-drawer__address">
+          ROUNDROCK COTTON s.r.o.<br />Lidicka 700/19<br />602 00 Brno, Czech
+          Republic
+        </p>
+      </div>
+    </aside>
+
+    <div class="contact-modal" aria-hidden="true">
+      <div class="contact-modal__backdrop" data-modal-close></div>
+      <div
+        class="contact-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle-service"
+      >
+        <div class="contact-modal__top">
+          <div>
+            <p class="eyebrow">Project Inquiry</p>
+            <h2 id="modalTitle-service">
+              Tell us about the acquisition challenge or performance target you
+              need help with.
+            </h2>
+            <p>
+              Share the current channel mix, spend level, or performance
+              bottleneck and we will review where the work should start first.
+            </p>
+          </div>
+          <button
+            class="contact-modal__close"
+            type="button"
+            aria-label="Close contact form"
+            data-modal-close
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <form class="contact-form" action="contact.php" method="post">
+          <label
+            ><span>Name</span
+            ><input type="text" name="name" placeholder="Your name" required
+          /></label>
+          <label
+            ><span>Email</span
+            ><input
+              type="email"
+              name="email"
+              placeholder="you@company.com"
+              required
+          /></label>
+          <label
+            ><span>Company</span
+            ><input type="text" name="company" placeholder="Company name"
+          /></label>
+          <label>
+            <span>Service interest</span>
+            <select name="service">
+              <option value="">Select a focus area</option>
+              <option>Brand Strategy</option>
+              <option>Performance Marketing</option>
+              <option>Web Design</option>
+              <option>Development &amp; Support</option>
+              <option>Frontend Development</option>
+              <option>Backend Development</option>
+              <option>Landing Page Design</option>
+              <option>Support &amp; Maintenance</option>
+              <option>Full-Cycle Delivery</option>
+            </select>
+          </label>
+          <label>
+            <span>Budget range</span>
+            <select name="budget">
+              <option value="">Select a range</option>
+              <option>$5k - $15k</option>
+              <option>$15k - $35k</option>
+              <option>$35k - $75k</option>
+              <option>$75k+</option>
+            </select>
+          </label>
+          <label class="contact-form__full"
+            ><span>Project details</span
+            ><textarea
+              name="details"
+              rows="6"
+              placeholder="Describe the project, the current challenge, and what outcome you want next."
+              required
+            ></textarea>
+          </label>
+          <input
+            type="hidden"
+            name="return_to"
+            value="performance-marketing.html"
+          />
+          <input
+            type="text"
+            name="website"
+            class="contact-form__trap"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+          <button class="btn btn--primary" type="submit">Send inquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <section class="page-hero page-hero--service scene-section">
+        <div class="container service-hero">
+          <div class="service-hero__copy">
+            <p class="service-hero__crumbs reveal" data-reveal="fade-up">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <a href="index.html#services-preview">Services</a>
+              <span>/</span>
+              <span>Performance Marketing</span>
+            </p>
+            <p class="eyebrow reveal" data-reveal="fade-up">
+              Service detail | Performance Marketing
+            </p>
+            <h1 class="split-text">Performance Marketing</h1>
+            <p class="reveal" data-reveal="fade-up">
+              This service is built for companies that want tighter control over
+              acquisition efficiency. We connect channel strategy, campaign
+              structure, landing page alignment, testing, and reporting into one
+              performance workflow.
+            </p>
+            <div class="hero-actions reveal" data-reveal="fade-up">
+              <a class="btn btn--primary" href="contact.html"
+                >Discuss this service</a
+              >
+              <a class="btn btn--secondary" href="index.html#services-preview"
+                >Back to all services</a
+              >
+            </div>
+          </div>
+          <div class="service-hero__panel reveal" data-reveal="fade-left">
+            <h2>Service snapshot</h2>
+            <ul>
+              <li>
+                <strong>For:</strong> businesses with active ad spend or
+                upcoming acquisition goals that need more efficient demand
+                generation
+              </li>
+              <li>
+                <strong>Includes:</strong> paid social, search advertising,
+                testing logic, landing page alignment, reporting, and
+                optimisation
+              </li>
+              <li>
+                <strong>Primary goal:</strong> reduce wasted spend and improve
+                the quality of leads, demand, or sales generated from paid
+                channels
+              </li>
+              <li><strong>CTA:</strong> Request a performance review</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="service-layout scene-section">
+        <div class="container service-layout__grid">
+          <aside class="service-sidebar reveal" data-reveal="fade-right">
+            <nav class="service-detail-nav" aria-label="Service pages">
+              <a class="service-detail-nav__link" href="brand-strategy.html"
+                ><span>Brand Strategy</span><i data-lucide="arrow-right"></i
+              ></a>
+              <a
+                class="service-detail-nav__link is-active"
+                href="performance-marketing.html"
+                ><span>Performance Marketing</span
+                ><i data-lucide="arrow-right"></i
+              ></a>
+              <a class="service-detail-nav__link" href="web-design.html"
+                ><span>Web Design</span><i data-lucide="arrow-right"></i
+              ></a>
+              <a class="service-detail-nav__link" href="service-detail.html"
+                ><span>Development &amp; Support</span
+                ><i data-lucide="arrow-right"></i
+              ></a>
+            </nav>
+
+            <article class="service-sidebar__card">
+              <img
+                src="img/home/ceo.webp"
+                alt="ROUNDROCK COTTON project contact support"
+              />
+              <div class="service-sidebar__card-copy">
+                <p class="eyebrow">Project Desk</p>
+                <h3>Need a clearer starting point?</h3>
+                <p>
+                  Tell us what you are trying to scale, fix, or optimise and we
+                  will help define the next step through one structured project
+                  form.
+                </p>
+                <a class="btn btn--primary" href="contact.html" data-modal-open
+                  >Start the Conversation</a
+                >
+              </div>
+            </article>
+          </aside>
+
+          <div class="service-layout__content">
+            <article class="service-lead-card reveal" data-reveal="fade-up">
+              <div class="service-lead-card__media">
+                <img
+                  src="img/services/perfomance-marketing.webp"
+                  alt="Team reviewing campaign and reporting work together."
+                />
+              </div>
+              <div class="service-lead-card__body">
+                <h2>Performance Marketing</h2>
+                <p>
+                  Performance marketing works best when media buying, message,
+                  landing-page experience, and reporting all support the same
+                  commercial goal. It is not only about switching campaigns on
+                  inside an ad account. It is about making sure the full path
+                  from first click to enquiry or sale feels relevant, efficient,
+                  and commercially useful.
+                </p>
+                <p>
+                  For ROUNDROCK COTTON, this means planning channel strategy,
+                  managing paid social and search activity, improving page
+                  alignment, and keeping reporting close to real business
+                  decisions. We work with widely used platforms such as Google
+                  Ads, Meta Ads, LinkedIn Ads, YouTube placements, Google
+                  Analytics 4, Google Tag Manager, Search Console, and other
+                  established tools where they are relevant to the project
+                  scope.
+                </p>
+              </div>
+            </article>
+
+            <section class="service-summary scene-section">
+              <div class="container service-summary__grid">
+                <article class="summary-card reveal" data-reveal="fade-up">
+                  <h2>What this service solves</h2>
+                  <p>
+                    Performance usually breaks down when channel setup, ad
+                    message, landing-page experience, tracking, and reporting
+                    are handled as separate tasks by different people. The
+                    result is wasted spend, weak lead quality, and unclear
+                    reporting. We solve for the full acquisition path, not just
+                    ad account activity, so the marketing budget is tied more
+                    closely to real enquiries, qualified leads, and commercial
+                    growth.
+                  </p>
+                </article>
+                <article class="summary-card reveal" data-reveal="fade-up">
+                  <h2>Real business value</h2>
+                  <p>
+                    The business value is clearer budget control, lower
+                    acquisition waste, better lead quality, faster learning
+                    cycles, and reporting that helps managers and owners
+                    understand what is actually driving results across Google
+                    Ads, Meta Ads, LinkedIn activity, and supporting landing
+                    pages.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="service-includes scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">What is included</p>
+                  <h2>
+                    A connected acquisition system rather than isolated channel
+                    management.
+                  </h2>
+                </div>
+                <div class="includes-grid">
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Paid social campaigns</h3>
+                    <p>
+                      We plan and manage paid social campaigns across Meta Ads,
+                      LinkedIn Ads, and other relevant platforms with a focus on
+                      audience quality, creative testing, lead intent, and
+                      stronger alignment between the ad promise and the offer
+                      being promoted.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Search advertising</h3>
+                    <p>
+                      We structure Google Ads campaigns around search intent,
+                      keyword quality, campaign priorities, and ad messaging
+                      that reflects what the audience is actively looking for
+                      rather than broad traffic for its own sake.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Landing page alignment</h3>
+                    <p>
+                      We review and improve the relationship between the
+                      campaign and the page experience so visitors from Google
+                      Ads, Meta Ads, LinkedIn Ads, or remarketing traffic land
+                      on a page that feels consistent, credible, and easy to act
+                      on.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Testing and optimisation</h3>
+                    <p>
+                      We run structured testing across audiences, creative
+                      angles, copy, campaign setup, and page assumptions so
+                      optimisation is based on real signal rather than guesswork
+                      or random tweaks.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Tracking and reporting</h3>
+                    <p>
+                      We review measurement and reporting using known systems
+                      such as Google Analytics 4, Google Tag Manager, Meta
+                      Pixel, Search Console, and platform-native reporting so
+                      decision-makers get clearer visibility without being
+                      overwhelmed by unnecessary technical detail.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Commercial insight loop</h3>
+                    <p>
+                      We translate campaign activity into clear commercial
+                      recommendations so you understand what to scale, what to
+                      pause, what to improve, and how paid acquisition should
+                      connect with the wider digital strategy.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="approach-section scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">Approach</p>
+                  <h2>
+                    We move through five practical stages so strategy,
+                    execution, and reporting stay tied to the same commercial
+                    goals.
+                  </h2>
+                </div>
+                <div class="approach-timeline">
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">01</span>
+                    </div>
+                    <h3>Account and signal review</h3>
+                    <p>
+                      Review channels, spend allocation, existing campaigns,
+                      tracking quality, page alignment, and the biggest sources
+                      of current inefficiency.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">02</span>
+                    </div>
+                    <h3>Channel plan</h3>
+                    <p>
+                      Define platform mix, campaign priorities, testing logic,
+                      budget direction, and what the first performance cycle
+                      should validate.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">03</span>
+                    </div>
+                    <h3>Campaign build and activation</h3>
+                    <p>
+                      Launch the agreed structure across paid social, search, or
+                      both, with creative logic and page alignment already
+                      mapped to the offer.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">04</span>
+                    </div>
+                    <h3>Test and optimise</h3>
+                    <p>
+                      Read the signals, refine creative and audiences, improve
+                      keyword quality, and tighten the spend against what is
+                      performing best.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">05</span>
+                    </div>
+                    <h3>Report and prioritise</h3>
+                    <p>
+                      Turn campaign data into clear business recommendations so
+                      the next decisions on budget, offer, and page experience
+                      are easier to make.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="deliverables-section scene-section">
+              <div class="container deliverables-grid">
+                <div class="deliverables-panel reveal" data-reveal="fade-right">
+                  <p class="eyebrow">Deliverables</p>
+                  <h2>What clients actually receive.</h2>
+                  <ul>
+                    <li>Channel strategy and campaign priority plan</li>
+                    <li>
+                      Google Ads and paid social structure recommendations
+                    </li>
+                    <li>Creative, copy, and audience testing roadmap</li>
+                    <li>Landing page and conversion-path improvement notes</li>
+                    <li>Reporting format with clear optimisation priorities</li>
+                    <li>
+                      Recommendations on budget allocation, scaling, and next
+                      actions
+                    </li>
+                  </ul>
+                </div>
+                <div class="deliverables-panel reveal" data-reveal="fade-left">
+                  <p class="eyebrow">Best fit</p>
+                  <h2>Who this is for.</h2>
+                  <ul>
+                    <li>
+                      Businesses already investing in acquisition and wanting
+                      cleaner scale
+                    </li>
+                    <li>
+                      Teams with underperforming Google Ads, Meta Ads, or
+                      mixed-channel campaigns
+                    </li>
+                    <li>
+                      Brands launching new offers that need stronger paid demand
+                      capture
+                    </li>
+                    <li>
+                      Companies that need better alignment between ads, pages,
+                      and lead quality
+                    </li>
+                    <li>
+                      Service businesses that want more useful reporting for
+                      management decisions
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="impact-section scene-section">
+              <div class="container impact-grid">
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i class="impact-card__icon" data-lucide="funnel"></i>
+                  </div>
+                  <h3>Lower waste</h3>
+                  <p>
+                    Cleaner account structure and tighter optimisation reduce
+                    spend going to low-value traffic, weak search intent, or
+                    audiences that are unlikely to convert.
+                  </p>
+                </article>
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i
+                      class="impact-card__icon"
+                      data-lucide="user-round-check"
+                    ></i>
+                  </div>
+                  <h3>Stronger lead quality</h3>
+                  <p>
+                    Better alignment between ads, offers, and landing pages
+                    helps more of the right people reach the next step and
+                    improves the quality of inbound demand.
+                  </p>
+                </article>
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i class="impact-card__icon" data-lucide="wallet-cards"></i>
+                  </div>
+                  <h3>Clearer budget decisions</h3>
+                  <p>
+                    Better reporting and testing logic make it easier to know
+                    which channels deserve more spend, where pages need
+                    attention, and what should change before the next cycle.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="faq-section scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">FAQ</p>
+                  <h2>
+                    Common questions before a performance marketing engagement
+                    begins.
+                  </h2>
+                </div>
+                <div class="faq-list">
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Can you work with existing ad accounts and campaign
+                        history?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        Yes. In many cases that is the fastest and most
+                        cost-effective way to improve performance. We review the
+                        existing Google Ads, Meta Ads, LinkedIn campaigns,
+                        tracking setup, and historical learning, keep what is
+                        still useful, and restructure the parts that are holding
+                        efficiency back.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Do you only manage media, or do you also look at
+                        landing pages and conversion flow?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        We look at the full conversion path, not only the media
+                        layer. Campaign performance is heavily affected by
+                        landing-page structure, offer clarity, lead forms,
+                        conversion friction, and tracking quality, so those
+                        areas are reviewed as part of the work too.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Is this useful if we are already getting leads but the
+                        cost is too high?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        Yes. That is often exactly the right moment. We look for
+                        wasted spend, weak segmentation, poor signal quality,
+                        underperforming keywords or audiences, and offer-to-page
+                        gaps that are inflating acquisition costs without
+                        improving lead quality.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Can reporting be shaped for leadership, not just
+                        platform operators?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        Yes. We structure reporting so it supports both
+                        day-to-day optimisation and higher-level decisions on
+                        budget, channel mix, lead quality, and growth
+                        priorities. The aim is to make the numbers useful for
+                        managers and founders, not only for ad platform
+                        operators.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner scene-section">
+        <div class="container cta-banner__inner reveal" data-reveal="fade-up">
+          <div class="cta-banner__copy">
+            <span class="cta-banner__eyebrow">Start With Us</span>
+            <h2>Ready to improve your <em>campaign performance?</em></h2>
+            <p>
+              Tell us what is happening in your current acquisition flow, and we
+              will guide you to the right next step through our contact form.
+            </p>
+            <a class="cta-banner__action" href="contact.html" data-modal-open>
+              <span>Open Contact Form</span>
+              <span class="cta-banner__action-icon"
+                ><i data-lucide="arrow-up-right"></i
+              ></span>
+            </a>
+          </div>
+
+          <div class="cta-banner__visual" aria-hidden="true">
+            <div class="cta-banner__image-shell">
+              <img src="img/home/cta-image.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand-mark brand-mark--footer" href="index.html">
+            <span class="brand-mark__glyph">RC</span>
+            <span class="brand-mark__text">
+              <strong>ROUNDROCK COTTON s.r.o.</strong>
+              <small>Full-cycle digital delivery for modern companies.</small>
+            </span>
+          </a>
+          <p class="footer-note">
+            ROUNDROCK COTTON s.r.o. connects strategy, web design, development,
+            launch delivery, and ongoing support into one practical operating
+            model.
+          </p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services-preview">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="brand-strategy.html">Brand Strategy</a></li>
+            <li>
+              <a href="performance-marketing.html">Performance Marketing</a>
+            </li>
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="service-detail.html">Development &amp; Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Communication via contact form only</li>
+            <li>Lidická 700/19<br />602 00 Brno, Czech Republic</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights
+          reserved.
+        </p>
       <div>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookies Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
     </div>
-  </footer>
+    </footer>
 
-  <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="js/main.js" defer></script>
-</body>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

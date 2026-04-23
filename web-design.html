@@ -1,452 +1,822 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detailed breakdown of ROUNDROCK COTTON s.r.o.'s web design service, including UX structure, landing pages, page systems, design handoff, deliverables, fit, and FAQs.">
-  <title>Web Design | ROUNDROCK COTTON s.r.o.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/bundle.css">
-  <link rel="stylesheet" href="css/pages/service.css">
-</head>
-<body data-page="service-detail">
-  <div class="site-noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand-mark" href="index.html" aria-label="ROUNDROCK COTTON home">
-        <span class="brand-mark__glyph">RC</span>
-        <span class="brand-mark__text">
-          <strong>ROUNDROCK COTTON s.r.o.</strong>
-          <small>Marketing, Design &amp; Development</small>
-        </span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#services-preview">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-utility desktop-only" href="contact.html" aria-label="Open project contact panel" data-drawer-open>
-          <span class="header-utility__icon">
-            <i data-lucide="clipboard-pen-line"></i>
-          </span>
-          <span class="header-utility__text">
-            <small>Let’s Talk</small>
-            <strong>Start Your Project</strong>
-          </span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open navigation">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-    <div class="menu-overlay__backdrop" data-menu-close></div>
-    <div class="menu-overlay__panel">
-      <div class="menu-overlay__top">
-        <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
-        <button class="menu-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button>
-      </div>
-      <nav class="menu-overlay__nav" aria-label="Mobile navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#services-preview">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="menu-overlay__footer">
-        <a class="btn btn--primary" href="contact.html">Send a Project Request</a>
-        <p>From strategy and websites to launch, support, and digital growth, every conversation starts through one clear project form.</p>
-      </div>
-    </div>
-  </div>
-
-  <aside class="contact-drawer" aria-hidden="true">
-    <div class="contact-drawer__backdrop" data-drawer-close></div>
-    <div class="contact-drawer__panel">
-      <div class="contact-drawer__top">
-        <div>
-          <p class="eyebrow">Let’s Talk</p>
-          <h2>Tell us what you have in mind.</h2>
-          <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
-        </div>
-        <button class="contact-drawer__close" type="button" aria-label="Close contact panel" data-drawer-close>
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <ul class="contact-drawer__list">
-        <li><strong>Good fit for:</strong> new websites, redesigns, development work, launch support, and ongoing updates</li>
-        <li><strong>Best way to reach us:</strong> send the brief through the form and include as much context as you can</li>
-        <li><strong>What happens next:</strong> we review the request and come back with a clear next step</li>
-      </ul>
-      <div class="contact-drawer__actions">
-        <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
-        <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
-      </div>
-      <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
-      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidicka 700/19<br>602 00 Brno, Czech Republic</p>
-    </div>
-  </aside>
-
-  <div class="contact-modal" aria-hidden="true">
-    <div class="contact-modal__backdrop" data-modal-close></div>
-    <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle-service">
-      <div class="contact-modal__top">
-        <div>
-          <p class="eyebrow">Project Inquiry</p>
-          <h2 id="modalTitle-service">Tell us about the website, landing page, or redesign you want to shape.</h2>
-          <p>Share the current interface challenge and we will review where UX, page structure, or visual direction should start first.</p>
-        </div>
-        <button class="contact-modal__close" type="button" aria-label="Close contact form" data-modal-close>
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <form class="contact-form" action="contact.php" method="post">
-        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
-        <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
-        <label><span>Company</span><input type="text" name="company" placeholder="Company name"></label>
-        <label>
-          <span>Service interest</span>
-          <select name="service">
-            <option value="">Select a focus area</option>
-            <option>Brand Strategy</option>
-            <option>Performance Marketing</option>
-            <option>Web Design</option>
-            <option>Development &amp; Support</option>
-            <option>Frontend Development</option>
-            <option>Backend Development</option>
-            <option>Landing Page Design</option>
-            <option>Support &amp; Maintenance</option>
-            <option>Full-Cycle Delivery</option>
-          </select>
-        </label>
-        <label>
-          <span>Budget range</span>
-          <select name="budget">
-            <option value="">Select a range</option>
-            <option>$5k - $15k</option>
-            <option>$15k - $35k</option>
-            <option>$35k - $75k</option>
-            <option>$75k+</option>
-          </select>
-        </label>
-        <label class="contact-form__full"><span>Project details</span><textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea></label>
-        <input type="hidden" name="return_to" value="web-design.html">
-        <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--primary" type="submit">Send inquiry</button>
-      </form>
-    </div>
-  </div>
-
-  <main>
-    <section class="page-hero page-hero--service scene-section">
-      <div class="container service-hero">
-        <div class="service-hero__copy">
-          <p class="service-hero__crumbs reveal" data-reveal="fade-up">
-            <a href="index.html">Home</a>
-            <span>/</span>
-            <a href="index.html#services-preview">Services</a>
-            <span>/</span>
-            <span>Web Design</span>
-          </p>
-          <p class="eyebrow reveal" data-reveal="fade-up">Service detail | Web Design</p>
-          <h1 class="split-text">Web Design</h1>
-          <p class="reveal" data-reveal="fade-up">
-            This service is built for companies that need more than attractive screens. We structure websites, landing pages, and digital interfaces so the visual system supports comprehension, trust, and conversion.
-          </p>
-          <div class="hero-actions reveal" data-reveal="fade-up">
-            <a class="btn btn--primary" href="contact.html">Discuss this service</a>
-            <a class="btn btn--secondary" href="index.html#services-preview">Back to all services</a>
-          </div>
-        </div>
-        <div class="service-hero__panel reveal" data-reveal="fade-left">
-          <h2>Service snapshot</h2>
-          <ul>
-            <li><strong>For:</strong> companies launching, redesigning, or improving websites and landing pages with weak visual or conversion structure</li>
-            <li><strong>Includes:</strong> UX thinking, wireframes, UI systems, page layouts, landing pages, and implementation-ready design direction</li>
-            <li><strong>Primary goal:</strong> make the digital experience easier to understand, easier to trust, and easier to act on</li>
-            <li><strong>CTA:</strong> Request a web design review</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="service-layout scene-section">
-      <div class="container service-layout__grid">
-        <aside class="service-sidebar reveal" data-reveal="fade-right">
-          <nav class="service-detail-nav" aria-label="Service pages">
-            <a class="service-detail-nav__link" href="brand-strategy.html"><span>Brand Strategy</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link" href="performance-marketing.html"><span>Performance Marketing</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link is-active" href="web-design.html"><span>Web Design</span><i data-lucide="arrow-right"></i></a>
-            <a class="service-detail-nav__link" href="service-detail.html"><span>Development &amp; Support</span><i data-lucide="arrow-right"></i></a>
-          </nav>
-
-          <article class="service-sidebar__card">
-            <img src="img/home/ceo.webp" alt="ROUNDROCK COTTON project contact support">
-            <div class="service-sidebar__card-copy">
-              <p class="eyebrow">Project Desk</p>
-              <h3>Need a clearer starting point?</h3>
-              <p>Tell us what you are redesigning, refining, or launching and we will help define the next step through one structured project form.</p>
-              <a class="btn btn--primary" href="contact.html" data-modal-open>Start the Conversation</a>
-            </div>
-          </article>
-        </aside>
-
-        <div class="service-layout__content">
-          <article class="service-lead-card reveal" data-reveal="fade-up">
-            <div class="service-lead-card__media">
-              <img src="img/home/about-sec.webp" alt="Creative team reviewing design layouts and interface direction.">
-            </div>
-            <div class="service-lead-card__body">
-              <h2>Web Design</h2>
-              <p>Web design works best when it does more than decorate a page. It should organise information, create trust, reduce friction, and make the next action feel clearer at every step of the journey.</p>
-              <p>For ROUNDROCK COTTON, this means shaping UX structure, landing-page logic, reusable interface systems, and implementation-ready design direction that can hold up during development.</p>
-            </div>
-          </article>
-
-          <section class="service-summary scene-section">
-            <div class="container service-summary__grid">
-              <article class="summary-card reveal" data-reveal="fade-up">
-                <h2>What this service solves</h2>
-                <p>Many websites underperform because the page hierarchy is unclear, the value is buried, the UI feels inconsistent, or the user journey is never shaped around real decisions. We solve for usability, clarity, and conversion logic together.</p>
-              </article>
-              <article class="summary-card reveal" data-reveal="fade-up">
-                <h2>Real business value</h2>
-                <p>A stronger digital presence, clearer page flow, more confident user journeys, and a cleaner design foundation for development and launch.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="service-includes scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">What is included</p>
-                <h2>A conversion-minded interface system rather than disconnected screens.</h2>
-              </div>
-              <div class="includes-grid">
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>UX and page structure</h3>
-                  <p>Information flow, page hierarchy, and user-path planning so the interface supports the actual commercial goal of the page.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Wireframes and flow design</h3>
-                  <p>Low-friction layout planning that clarifies what belongs where before the visual layer starts carrying too much responsibility.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Landing page design</h3>
-                  <p>Campaign-led page structures with stronger narrative sequencing, proof placement, and clearer conversion paths.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>UI system direction</h3>
-                  <p>Component logic, layout rules, spacing discipline, and reusable interface patterns that make implementation more consistent.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Responsive design thinking</h3>
-                  <p>Design decisions that account for how the interface should scale, collapse, and prioritise content across devices.</p>
-                </article>
-                <article class="includes-card reveal" data-reveal="fade-up">
-                  <h3>Developer handoff support</h3>
-                  <p>Implementation-ready files and guidance so the build phase preserves hierarchy, usability, and the intended interaction logic.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section class="approach-section scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">Approach</p>
-                <h2>We move through five deliberate stages so the design improves usability, supports conversion, and stays practical for implementation.</h2>
-              </div>
-              <div class="approach-timeline">
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>01</span>
-                  <h3>Context and objectives review</h3>
-                  <p>Review the offer, the existing interface, user priorities, and where page clarity or visual trust is currently breaking down.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>02</span>
-                  <h3>Wireframe structure</h3>
-                  <p>Map page order, sections, key actions, and content emphasis before visual styling starts carrying the whole solution.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>03</span>
-                  <h3>Visual direction and UI system</h3>
-                  <p>Build the visual language, component system, responsive logic, and page treatment around the approved structural flow.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>04</span>
-                  <h3>Refinement and edge cases</h3>
-                  <p>Review hierarchy, readability, trust signals, CTA visibility, and responsive behavior before design handoff is finalised.</p>
-                </article>
-                <article class="approach-step reveal" data-reveal="fade-up">
-                  <span>05</span>
-                  <h3>Handoff and support</h3>
-                  <p>Prepare implementation-ready assets and stay involved where needed so the build phase can preserve the intended experience.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section class="deliverables-section scene-section">
-            <div class="container deliverables-grid">
-              <div class="deliverables-panel reveal" data-reveal="fade-right">
-                <p class="eyebrow">Deliverables</p>
-                <h2>What clients actually receive.</h2>
-                <ul>
-                  <li>Wireframes and key page layout direction</li>
-                  <li>High-fidelity page or screen designs</li>
-                  <li>Reusable component and UI pattern system</li>
-                  <li>Responsive behavior notes and implementation guidance</li>
-                  <li>Design handoff package for development</li>
-                </ul>
-              </div>
-              <div class="deliverables-panel reveal" data-reveal="fade-left">
-                <p class="eyebrow">Best fit</p>
-                <h2>Who this is for.</h2>
-                <ul>
-                  <li>Companies launching a new website or redesigning an outdated one</li>
-                  <li>Businesses with strong offers but weak interface clarity</li>
-                  <li>Teams needing landing pages or key page flows that convert better</li>
-                  <li>Projects that need implementation-ready design, not visual exploration only</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="impact-section scene-section">
-            <div class="container impact-grid">
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Stronger user clarity</h3>
-                <p>Visitors understand the offer faster because the page hierarchy and interaction flow make the decision easier.</p>
-              </article>
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Higher trust and usability</h3>
-                <p>The interface feels more consistent, more credible, and easier to navigate across the moments that matter most.</p>
-              </article>
-              <article class="impact-card reveal" data-reveal="fade-up">
-                <span>Expected impact</span>
-                <h3>Smoother implementation</h3>
-                <p>A cleaner handoff gives development a better structure to build from and reduces visual drift during implementation.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="faq-section scene-section">
-            <div class="container">
-              <div class="section-heading reveal" data-reveal="fade-up">
-                <p class="eyebrow">FAQ</p>
-                <h2>Common questions before a web design engagement begins.</h2>
-              </div>
-              <div class="faq-list">
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Can you design only part of a website, not the whole platform?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>Yes. We can focus on landing pages, a homepage, a service section, or another high-impact part of the experience if that is where the biggest improvement is needed first.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Can this stay design-only, or does it need to include development too?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>It can stay design-only if that is what the project needs. We can also continue into implementation support if you want the build phase kept closer to the approved design.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>Do you work from existing copy, or do you need final content first?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>We can work from existing content, content drafts, or a clear content outline. Final copy helps, but the page structure and narrative logic can be shaped before every line is locked.</p>
-                  </div>
-                </article>
-                <article class="faq-item reveal" data-reveal="fade-up">
-                  <button class="faq-trigger" type="button" aria-expanded="false">
-                    <span>How detailed is the handoff for development?</span>
-                    <span>+</span>
-                  </button>
-                  <div class="faq-answer">
-                    <p>Detailed enough for implementation to move with fewer assumptions. We prepare the layouts, UI logic, responsive intent, and component guidance needed for a cleaner build phase.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner scene-section">
-      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
-        <p class="eyebrow">Next step</p>
-        <h2>Send the current interface, redesign brief, or landing page goal and we will show you where the design work should begin first.</h2>
-        <p>Bring the UX issue, the redesign scope, or the conversion challenge. We will translate it into a clearer web design path.</p>
-        <a class="btn btn--primary" href="contact.html">Request a web design review</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand-mark brand-mark--footer" href="index.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed breakdown of ROUNDROCK COTTON s.r.o.'s web design service, including UX structure, landing pages, page systems, design handoff, deliverables, fit, and FAQs."
+    />
+    <title>Web Design | ROUNDROCK COTTON s.r.o.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="img/common/favicon.svg" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bundle.css" />
+    <link rel="stylesheet" href="css/pages/service.css" />
+  </head>
+  <body data-page="service-detail">
+    <div class="site-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand-mark"
+          href="index.html"
+          aria-label="ROUNDROCK COTTON home"
+        >
           <span class="brand-mark__glyph">RC</span>
           <span class="brand-mark__text">
             <strong>ROUNDROCK COTTON s.r.o.</strong>
-            <small>Full-cycle digital delivery for modern companies.</small>
+            <small>Marketing, Design &amp; Development</small>
           </span>
         </a>
-        <p class="footer-note">ROUNDROCK COTTON s.r.o. connects strategy, web design, development, launch delivery, and ongoing support into one practical operating model.</p>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services-preview">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-utility desktop-only"
+            href="contact.html"
+            aria-label="Open project contact panel"
+            data-drawer-open
+          >
+            <span class="header-utility__icon">
+              <i data-lucide="clipboard-pen-line"></i>
+            </span>
+            <span class="header-utility__text">
+              <small>Let’s Talk</small>
+              <strong>Start Your Project</strong>
+            </span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menuOverlay"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services-preview">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Services</h3>
-        <ul>
-          <li><a href="brand-strategy.html">Brand Strategy</a></li>
-          <li><a href="performance-marketing.html">Performance Marketing</a></li>
-          <li><a href="web-design.html">Web Design</a></li>
-          <li><a href="service-detail.html">Development &amp; Support</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <li>Communication via contact form only</li>
-          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
-        </ul>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <div class="menu-overlay__backdrop" data-menu-close></div>
+      <div class="menu-overlay__panel">
+        <div class="menu-overlay__top">
+          <p class="eyebrow">Navigate ROUNDROCK COTTON</p>
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation"
+            data-menu-close
+          >
+            &times;
+          </button>
+        </div>
+        <nav class="menu-overlay__nav" aria-label="Mobile navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services-preview">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-overlay__footer">
+          <a class="btn btn--primary" href="contact.html"
+            >Send a Project Request</a
+          >
+          <p>
+            From strategy and websites to launch, support, and digital growth,
+            every conversation starts through one clear project form.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
+
+    <aside class="contact-drawer" aria-hidden="true">
+      <div class="contact-drawer__backdrop" data-drawer-close></div>
+      <div class="contact-drawer__panel">
+        <div class="contact-drawer__top">
+          <div>
+            <p class="eyebrow">Let’s Talk</p>
+            <h2>Tell us what you have in mind.</h2>
+            <p>
+              Share the idea, the task, or the stage you are in, and we will
+              help you shape the right next step.
+            </p>
+          </div>
+          <button
+            class="contact-drawer__close"
+            type="button"
+            aria-label="Close contact panel"
+            data-drawer-close
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <ul class="contact-drawer__list">
+          <li>
+            <strong>Good fit for:</strong> new websites, redesigns, development
+            work, launch support, and ongoing updates
+          </li>
+          <li>
+            <strong>Best way to reach us:</strong> send the brief through the
+            form and include as much context as you can
+          </li>
+          <li>
+            <strong>What happens next:</strong> we review the request and come
+            back with a clear next step
+          </li>
+        </ul>
+        <div class="contact-drawer__actions">
+          <a class="btn btn--primary" href="contact.html" data-modal-open
+            >Start the Conversation</a
+          >
+          <a class="btn btn--secondary" href="contact.html"
+            >Go to Contact Page</a
+          >
+        </div>
+        <p class="contact-drawer__note">
+          We keep communication structured through the form so nothing important
+          gets lost in the first exchange.
+        </p>
+        <p class="contact-drawer__address">
+          ROUNDROCK COTTON s.r.o.<br />Lidicka 700/19<br />602 00 Brno, Czech
+          Republic
+        </p>
+      </div>
+    </aside>
+
+    <div class="contact-modal" aria-hidden="true">
+      <div class="contact-modal__backdrop" data-modal-close></div>
+      <div
+        class="contact-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle-service"
+      >
+        <div class="contact-modal__top">
+          <div>
+            <p class="eyebrow">Project Inquiry</p>
+            <h2 id="modalTitle-service">
+              Tell us about the website, landing page, or redesign you want to
+              shape.
+            </h2>
+            <p>
+              Share the current interface challenge and we will review where UX,
+              page structure, or visual direction should start first.
+            </p>
+          </div>
+          <button
+            class="contact-modal__close"
+            type="button"
+            aria-label="Close contact form"
+            data-modal-close
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <form class="contact-form" action="contact.php" method="post">
+          <label
+            ><span>Name</span
+            ><input type="text" name="name" placeholder="Your name" required
+          /></label>
+          <label
+            ><span>Email</span
+            ><input
+              type="email"
+              name="email"
+              placeholder="you@company.com"
+              required
+          /></label>
+          <label
+            ><span>Company</span
+            ><input type="text" name="company" placeholder="Company name"
+          /></label>
+          <label>
+            <span>Service interest</span>
+            <select name="service">
+              <option value="">Select a focus area</option>
+              <option>Brand Strategy</option>
+              <option>Performance Marketing</option>
+              <option>Web Design</option>
+              <option>Development &amp; Support</option>
+              <option>Frontend Development</option>
+              <option>Backend Development</option>
+              <option>Landing Page Design</option>
+              <option>Support &amp; Maintenance</option>
+              <option>Full-Cycle Delivery</option>
+            </select>
+          </label>
+          <label>
+            <span>Budget range</span>
+            <select name="budget">
+              <option value="">Select a range</option>
+              <option>$5k - $15k</option>
+              <option>$15k - $35k</option>
+              <option>$35k - $75k</option>
+              <option>$75k+</option>
+            </select>
+          </label>
+          <label class="contact-form__full"
+            ><span>Project details</span
+            ><textarea
+              name="details"
+              rows="6"
+              placeholder="Describe the project, the current challenge, and what outcome you want next."
+              required
+            ></textarea>
+          </label>
+          <input type="hidden" name="return_to" value="web-design.html" />
+          <input
+            type="text"
+            name="website"
+            class="contact-form__trap"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+          <button class="btn btn--primary" type="submit">Send inquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <section class="page-hero page-hero--service scene-section">
+        <div class="container service-hero">
+          <div class="service-hero__copy">
+            <p class="service-hero__crumbs reveal" data-reveal="fade-up">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <a href="index.html#services-preview">Services</a>
+              <span>/</span>
+              <span>Web Design</span>
+            </p>
+            <p class="eyebrow reveal" data-reveal="fade-up">
+              Service detail | Web Design
+            </p>
+            <h1 class="split-text">Web Design</h1>
+            <p class="reveal" data-reveal="fade-up">
+              This service is built for companies that need more than attractive
+              screens. We structure websites, landing pages, and digital
+              interfaces so the visual system supports comprehension, trust, and
+              conversion.
+            </p>
+            <div class="hero-actions reveal" data-reveal="fade-up">
+              <a class="btn btn--primary" href="contact.html"
+                >Discuss this service</a
+              >
+              <a class="btn btn--secondary" href="index.html#services-preview"
+                >Back to all services</a
+              >
+            </div>
+          </div>
+          <div class="service-hero__panel reveal" data-reveal="fade-left">
+            <h2>Service snapshot</h2>
+            <ul>
+              <li>
+                <strong>For:</strong> companies launching, redesigning, or
+                improving websites and landing pages with weak visual or
+                conversion structure
+              </li>
+              <li>
+                <strong>Includes:</strong> UX thinking, wireframes, UI systems,
+                page layouts, landing pages, and implementation-ready design
+                direction
+              </li>
+              <li>
+                <strong>Primary goal:</strong> make the digital experience
+                easier to understand, easier to trust, and easier to act on
+              </li>
+              <li><strong>CTA:</strong> Request a web design review</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="service-layout scene-section">
+        <div class="container service-layout__grid">
+          <aside class="service-sidebar reveal" data-reveal="fade-right">
+            <nav class="service-detail-nav" aria-label="Service pages">
+              <a class="service-detail-nav__link" href="brand-strategy.html"
+                ><span>Brand Strategy</span><i data-lucide="arrow-right"></i
+              ></a>
+              <a
+                class="service-detail-nav__link"
+                href="performance-marketing.html"
+                ><span>Performance Marketing</span
+                ><i data-lucide="arrow-right"></i
+              ></a>
+              <a
+                class="service-detail-nav__link is-active"
+                href="web-design.html"
+                ><span>Web Design</span><i data-lucide="arrow-right"></i
+              ></a>
+              <a class="service-detail-nav__link" href="service-detail.html"
+                ><span>Development &amp; Support</span
+                ><i data-lucide="arrow-right"></i
+              ></a>
+            </nav>
+
+            <article class="service-sidebar__card">
+              <img
+                src="img/home/ceo.webp"
+                alt="ROUNDROCK COTTON project contact support"
+              />
+              <div class="service-sidebar__card-copy">
+                <p class="eyebrow">Project Desk</p>
+                <h3>Need a clearer starting point?</h3>
+                <p>
+                  Tell us what you are redesigning, refining, or launching and
+                  we will help define the next step through one structured
+                  project form.
+                </p>
+                <a class="btn btn--primary" href="contact.html" data-modal-open
+                  >Start the Conversation</a
+                >
+              </div>
+            </article>
+          </aside>
+
+          <div class="service-layout__content">
+            <article class="service-lead-card reveal" data-reveal="fade-up">
+              <div class="service-lead-card__media">
+                <img
+                  src="img/services/web-design.webp"
+                  alt="Creative team reviewing design layouts and interface direction."
+                />
+              </div>
+              <div class="service-lead-card__body">
+                <h2>Web Design</h2>
+                <p>
+                  Web design works best when it does more than decorate a page.
+                  It should organise information, create trust, remove
+                  hesitation, and make the next action feel clearer at every
+                  important step. A strong interface helps clients understand
+                  the offer faster and makes the business appear more credible
+                  from the first screen.
+                </p>
+                <p>
+                  For ROUNDROCK COTTON, this means shaping UX structure,
+                  landing-page logic, reusable interface systems, and
+                  implementation-ready design direction that can hold up during
+                  development. We also consider how pages need to perform when
+                  traffic comes from known acquisition channels such as Google
+                  Ads, Meta Ads, email campaigns, organic search, and social
+                  content.
+                </p>
+              </div>
+            </article>
+
+            <section class="service-summary scene-section">
+              <div class="container service-summary__grid">
+                <article class="summary-card reveal" data-reveal="fade-up">
+                  <h2>What this service solves</h2>
+                  <p>
+                    Many websites underperform not because the business is weak,
+                    but because the page hierarchy is unclear, the value is
+                    buried, the interface feels inconsistent, or the user
+                    journey has never been designed around real business
+                    decisions. We solve for usability, trust, clarity, and
+                    conversion logic together so the design is not only visually
+                    better, but commercially stronger too.
+                  </p>
+                </article>
+                <article class="summary-card reveal" data-reveal="fade-up">
+                  <h2>Real business value</h2>
+                  <p>
+                    The result is a stronger digital presence, clearer page
+                    flow, better landing-page performance, more confident user
+                    journeys, and a cleaner design foundation for development,
+                    launch, and future campaign use across the wider marketing
+                    system.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="service-includes scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">What is included</p>
+                  <h2>
+                    A conversion-minded interface system rather than
+                    disconnected screens.
+                  </h2>
+                </div>
+                <div class="includes-grid">
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>UX and page structure</h3>
+                    <p>
+                      We plan information flow, page hierarchy, and user-path
+                      logic so each page supports a real commercial goal,
+                      whether that is enquiry generation, consultation booking,
+                      product discovery, or campaign response.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Wireframes and flow design</h3>
+                    <p>
+                      We create wireframes and flow logic that clarify what
+                      belongs where before visual styling begins, helping the
+                      page structure carry meaning instead of relying on
+                      decoration to solve deeper clarity problems.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Landing page design</h3>
+                    <p>
+                      We design landing pages for paid traffic and growth
+                      campaigns with stronger narrative sequencing, proof
+                      placement, and conversion paths that work well for Google
+                      Ads, Meta Ads, organic search, and email-driven traffic.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>UI system direction</h3>
+                    <p>
+                      We define component logic, layout rules, spacing
+                      discipline, and reusable interface patterns so the design
+                      feels consistent across service pages, landing pages,
+                      forms, and supporting sections.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Responsive design thinking</h3>
+                    <p>
+                      We account for how the interface should scale, collapse,
+                      and prioritise content across desktop, tablet, and mobile
+                      so the experience feels strong wherever the audience
+                      arrives from.
+                    </p>
+                  </article>
+                  <article class="includes-card reveal" data-reveal="fade-up">
+                    <h3>Developer handoff support</h3>
+                    <p>
+                      We prepare implementation-ready design files and guidance
+                      so the build phase preserves hierarchy, usability,
+                      responsive behaviour, and the intended conversion logic
+                      instead of losing quality in translation.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="approach-section scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">Approach</p>
+                  <h2>
+                    We move through five deliberate stages so the design
+                    improves usability, supports conversion, and stays practical
+                    for implementation.
+                  </h2>
+                </div>
+                <div class="approach-timeline">
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">01</span>
+                    </div>
+                    <h3>Context and objectives review</h3>
+                    <p>
+                      Review the offer, the existing interface, user priorities,
+                      and where page clarity or visual trust is currently
+                      breaking down.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">02</span>
+                    </div>
+                    <h3>Wireframe structure</h3>
+                    <p>
+                      Map page order, sections, key actions, and content
+                      emphasis before visual styling starts carrying the whole
+                      solution.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">03</span>
+                    </div>
+                    <h3>Visual direction and UI system</h3>
+                    <p>
+                      Build the visual language, component system, responsive
+                      logic, and page treatment around the approved structural
+                      flow.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">04</span>
+                    </div>
+                    <h3>Refinement and edge cases</h3>
+                    <p>
+                      Review hierarchy, readability, trust signals, CTA
+                      visibility, and responsive behavior before design handoff
+                      is finalised.
+                    </p>
+                  </article>
+                  <article class="approach-step reveal" data-reveal="fade-up">
+                    <div class="approach-step__head">
+                      <span class="approach-step__badge">05</span>
+                    </div>
+                    <h3>Handoff and support</h3>
+                    <p>
+                      Prepare implementation-ready assets and stay involved
+                      where needed so the build phase can preserve the intended
+                      experience.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="deliverables-section scene-section">
+              <div class="container deliverables-grid">
+                <div class="deliverables-panel reveal" data-reveal="fade-right">
+                  <p class="eyebrow">Deliverables</p>
+                  <h2>What clients actually receive.</h2>
+                  <ul>
+                    <li>Wireframes and key page layout direction</li>
+                    <li>High-fidelity page or screen designs</li>
+                    <li>Reusable component and UI pattern system</li>
+                    <li>
+                      Responsive behaviour guidance and implementation notes
+                    </li>
+                    <li>
+                      Landing-page structure for paid or campaign traffic where
+                      relevant
+                    </li>
+                    <li>Design handoff package ready for development</li>
+                  </ul>
+                </div>
+                <div class="deliverables-panel reveal" data-reveal="fade-left">
+                  <p class="eyebrow">Best fit</p>
+                  <h2>Who this is for.</h2>
+                  <ul>
+                    <li>
+                      Companies launching a new website or redesigning an
+                      outdated one
+                    </li>
+                    <li>
+                      Businesses with strong offers but weak interface clarity
+                      or trust signals
+                    </li>
+                    <li>
+                      Teams needing landing pages or key page flows that convert
+                      better
+                    </li>
+                    <li>
+                      Brands planning traffic from Google Ads, Meta Ads, or
+                      campaigns that need stronger destination pages
+                    </li>
+                    <li>
+                      Projects that need implementation-ready design, not visual
+                      exploration only
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="impact-section scene-section">
+              <div class="container impact-grid">
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i class="impact-card__icon" data-lucide="eye"></i>
+                  </div>
+                  <h3>Stronger user clarity</h3>
+                  <p>
+                    Visitors understand the offer faster because the page
+                    hierarchy, structure, and interaction flow make the decision
+                    path easier to follow.
+                  </p>
+                </article>
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i class="impact-card__icon" data-lucide="shield-check"></i>
+                  </div>
+                  <h3>Higher trust and usability</h3>
+                  <p>
+                    The interface feels more consistent, more credible, and
+                    easier to navigate across the moments that matter most,
+                    especially on high-intent pages.
+                  </p>
+                </article>
+                <article class="impact-card reveal" data-reveal="fade-up">
+                  <div class="impact-card__head">
+                    <i
+                      class="impact-card__icon"
+                      data-lucide="layout-panel-top"
+                    ></i>
+                  </div>
+                  <h3>Smoother implementation</h3>
+                  <p>
+                    A cleaner handoff gives development a better structure to
+                    build from and reduces visual drift during implementation,
+                    revisions, and launch preparation.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="faq-section scene-section">
+              <div class="container">
+                <div class="section-heading reveal" data-reveal="fade-up">
+                  <p class="eyebrow">FAQ</p>
+                  <h2>
+                    Common questions before a web design engagement begins.
+                  </h2>
+                </div>
+                <div class="faq-list">
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Can you design only part of a website, not the whole
+                        platform?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        Yes. We can focus on landing pages, a homepage, a
+                        service section, a lead-generation flow, or another
+                        high-impact part of the experience if that is where the
+                        biggest improvement is needed first. The scope does not
+                        need to start with a full redesign if the business would
+                        benefit more from a targeted page upgrade.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Can this stay design-only, or does it need to include
+                        development too?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        It can stay design-only if that is what the project
+                        needs. We can also continue into implementation support
+                        if you want the build phase kept closer to the approved
+                        design and if the pages need to launch cleanly for
+                        campaigns, Google Ads traffic, Meta Ads traffic, or
+                        broader website rollout.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span
+                        >Do you work from existing copy, or do you need final
+                        content first?</span
+                      >
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        We can work from existing content, content drafts, or a
+                        clear outline. Final copy always helps, but strong page
+                        structure, hierarchy, and content flow can be planned
+                        before every line is locked, especially when the goal is
+                        to improve clarity and conversion first.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="faq-item reveal" data-reveal="fade-up">
+                    <button
+                      class="faq-trigger"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      <span>How detailed is the handoff for development?</span>
+                      <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                      <p>
+                        Detailed enough for implementation to move with fewer
+                        assumptions and fewer visual inconsistencies. We prepare
+                        the layouts, UI logic, responsive intent, and component
+                        guidance needed for a cleaner build phase and a more
+                        faithful final result.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner scene-section">
+        <div class="container cta-banner__inner reveal" data-reveal="fade-up">
+          <div class="cta-banner__copy">
+            <span class="cta-banner__eyebrow">Start With Us</span>
+            <h2>Ready to upgrade your <em>web design?</em></h2>
+            <p>
+              Tell us what needs to improve in the interface, landing page, or
+              redesign scope, and we will guide you to the right next step
+              through our contact form.
+            </p>
+            <a class="cta-banner__action" href="contact.html" data-modal-open>
+              <span>Open Contact Form</span>
+              <span class="cta-banner__action-icon"
+                ><i data-lucide="arrow-up-right"></i
+              ></span>
+            </a>
+          </div>
+
+          <div class="cta-banner__visual" aria-hidden="true">
+            <div class="cta-banner__image-shell">
+              <img src="img/home/cta-image.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand-mark brand-mark--footer" href="index.html">
+            <span class="brand-mark__glyph">RC</span>
+            <span class="brand-mark__text">
+              <strong>ROUNDROCK COTTON s.r.o.</strong>
+              <small>Full-cycle digital delivery for modern companies.</small>
+            </span>
+          </a>
+          <p class="footer-note">
+            ROUNDROCK COTTON s.r.o. connects strategy, web design, development,
+            launch delivery, and ongoing support into one practical operating
+            model.
+          </p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services-preview">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="brand-strategy.html">Brand Strategy</a></li>
+            <li>
+              <a href="performance-marketing.html">Performance Marketing</a>
+            </li>
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="service-detail.html">Development &amp; Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Communication via contact form only</li>
+            <li>Lidická 700/19<br />602 00 Brno, Czech Republic</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights
+          reserved.
+        </p>
       <div>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookies Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
     </div>
-  </footer>
+    </footer>
 
-  <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="js/main.js" defer></script>
-</body>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/common/favicon.svg">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/bundle.css">
   <link rel="stylesheet" href="css/pages/contact.css">
@@ -35,7 +36,7 @@
             <i data-lucide="clipboard-pen-line"></i>
           </span>
           <span class="header-utility__text">
-            <small>Let’s Talk</small>
+            <small>Let's Talk</small>
             <strong>Start Your Project</strong>
           </span>
         </a>
@@ -72,7 +73,7 @@
     <div class="contact-drawer__panel">
       <div class="contact-drawer__top">
         <div>
-          <p class="eyebrow">Let’s Talk</p>
+          <p class="eyebrow">Let's Talk</p>
           <h2>Tell us what you have in mind.</h2>
           <p>Share the idea, the task, or the stage you are in, and we will help you shape the right next step.</p>
         </div>
@@ -90,7 +91,7 @@
         <a class="btn btn--secondary" href="contact.html">Go to Contact Page</a>
       </div>
       <p class="contact-drawer__note">We keep communication structured through the form so nothing important gets lost in the first exchange.</p>
-      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidická 700/19<br>602 00 Brno, Czech Republic</p>
+      <p class="contact-drawer__address">ROUNDROCK COTTON s.r.o.<br>Lidicka 700/19<br>602 00 Brno, Czech Republic</p>
     </div>
   </aside>
 
@@ -148,28 +149,23 @@
     <section class="page-hero page-hero--contact scene-section">
       <div class="container contact-hero">
         <div class="contact-hero__copy">
-          <p class="eyebrow reveal" data-reveal="fade-up">Contact ROUNDROCK COTTON s.r.o.</p>
-          <h1 class="split-text">Tell us what needs to be designed, developed, launched, or supported next.</h1>
-          <p class="reveal" data-reveal="fade-up">
-            We review all new requests through the contact form so the team gets the project scope, technical context, and business goal in one place. This helps us respond more accurately and faster.
+          <p class="contact-hero__crumbs reveal" data-reveal="fade-up">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Contact</span>
           </p>
-        </div>
-        <div class="contact-hero__trust reveal" data-reveal="fade-left">
-          <h2>What to expect</h2>
-          <ul>
-            <li>A structured review of your request by our team</li>
-            <li>An honest view on fit, scope, and next steps</li>
-            <li>Clear direction on whether strategy, design, development, or support should come first</li>
-          </ul>
+          <h1 class="split-text">Contact</h1>
+          <p class="reveal" data-reveal="fade-up">
+            Use the form to outline what needs to be designed, developed, launched, or supported next. We review every request in one place so the scope, business goal, and delivery context are clear from the start.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="contact-section scene-section">
       <div class="container contact-grid">
-        <article class="contact-card contact-card--form reveal" data-reveal="fade-up">
-          <p class="eyebrow">Inquiry form</p>
-          <h2>Start the conversation</h2>
+        <article class="contact-form-panel reveal" data-reveal="fade-up">
+          <h2>Send Your Message</h2>
           <form class="contact-form" action="contact.php" method="post">
             <label>
               <span>Name</span>
@@ -177,7 +173,7 @@
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="you@company.com" required>
+              <input type="email" name="email" placeholder="Enter email" required>
             </label>
             <label>
               <span>Company</span>
@@ -186,7 +182,7 @@
             <label>
               <span>Service interest</span>
               <select name="service">
-                <option value="">Select a focus area</option>
+                <option value="">Your subject</option>
                 <option>Brand Strategy</option>
                 <option>Performance Marketing</option>
                 <option>Web Design</option>
@@ -201,7 +197,7 @@
             <label>
               <span>Budget range</span>
               <select name="budget">
-                <option value="">Select a range</option>
+                <option value="">Budget range</option>
                 <option>$5k - $15k</option>
                 <option>$15k - $35k</option>
                 <option>$35k - $75k</option>
@@ -210,59 +206,54 @@
             </label>
             <label class="contact-form__full">
               <span>Project details</span>
-              <textarea name="details" rows="6" placeholder="Describe the project, the current challenge, and what outcome you want next." required></textarea>
+              <textarea name="details" rows="6" placeholder="Type your message..." required></textarea>
             </label>
+            <input type="hidden" name="return_to" value="contact.html">
             <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn--primary" type="submit">Send inquiry</button>
+            <button class="contact-submit" type="submit">
+              <span>Send Message</span>
+              <span class="contact-submit__icon"><i data-lucide="arrow-up-right"></i></span>
+            </button>
           </form>
         </article>
 
-        <div class="contact-stack">
-          <article class="contact-card reveal" data-reveal="fade-up">
-            <p class="eyebrow">How communication works</p>
-            <ul class="contact-list">
-              <li><strong>Primary channel:</strong> contact form only</li>
-              <li><strong>Registered address:</strong> Lidická 700/19, 602 00 Brno, Czech Republic</li>
-            </ul>
-          </article>
-          <article class="contact-card reveal" data-reveal="fade-up">
-            <p class="eyebrow">Ideal project fit</p>
-            <p>ROUNDROCK COTTON s.r.o. is a strong fit for companies that need one partner for website strategy, design, development, launch preparation, and post-launch support.</p>
-          </article>
-          <article class="contact-card reveal" data-reveal="fade-up">
-            <p class="eyebrow">Trust line</p>
-            <p>We will be direct if the timing is wrong, the scope is not a fit, or another sequence would serve the business better.</p>
-          </article>
+        <div class="contact-content reveal" data-reveal="fade-up">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Contact us about <em>your next project</em></h2>
+          <p class="contact-content__lead">Use the form to tell us what needs to be clarified, designed, built, launched, or improved. We review new enquiries through one structured channel so the scope, timing, and delivery context are clear from the start.</p>
+
+          <div class="contact-info-grid">
+            <article class="contact-info-card">
+              <h3>Registered Address</h3>
+              <p>Lidicka 700/19<br>602 00 Brno<br>Czech Republic</p>
+            </article>
+            <article class="contact-info-card">
+              <h3>Email</h3>
+              <p>support@roundrockcotton.com</p>
+              <p>All project communication is reviewed through the form so nothing important gets missed in the first exchange.</p>
+            </article>
+            <article class="contact-info-card">
+              <h3>What To Expect</h3>
+              <p>A structured review of your request, a clear view on fit, and practical next-step guidance based on the actual scope.</p>
+            </article>
+            <article class="contact-info-card">
+              <h3>Best Fit</h3>
+              <p>We work best with companies that need strategy, design, development, and launch support handled as one connected process.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="expectation-section scene-section">
-      <div class="container expectation-grid">
-        <article class="expectation-card reveal" data-reveal="fade-up">
-          <span>01</span>
-          <h3>Initial review</h3>
-          <p>We review the brief, current growth stage, and likely leverage points before recommending a path.</p>
-        </article>
-        <article class="expectation-card reveal" data-reveal="fade-up">
-          <span>02</span>
-          <h3>Fit conversation</h3>
-          <p>If there is alignment, we discuss timing, commercial goals, internal team context, and the right operating model.</p>
-        </article>
-        <article class="expectation-card reveal" data-reveal="fade-up">
-          <span>03</span>
-          <h3>Clear next step</h3>
-          <p>You receive a practical recommendation: strategy sprint, focused rebuild, or ongoing partnership if it makes sense.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-banner scene-section">
-      <div class="container cta-banner__inner reveal" data-reveal="fade-up">
-        <p class="eyebrow">Ready to start?</p>
-        <h2>Use the form to send the project context, and we will review the request with the right internal team.</h2>
-        <p>This keeps communication structured from the first message and helps us respond with a more useful next step.</p>
-        <a class="btn btn--primary" href="#top">Back to the form</a>
+    <section class="contact-map-section scene-section" aria-label="Company location map">
+      <div class="contact-map">
+        <iframe
+          title="Map showing the location of ROUNDROCK COTTON s.r.o."
+          src="https://www.google.com/maps?q=Lidicka%20700%2F19%2C%20602%2000%20Brno%2C%20Czech%20Republic&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
   </main>
@@ -301,7 +292,7 @@
         <h3>Contact</h3>
         <ul>
           <li>Communication via contact form only</li>
-          <li>Lidická 700/19<br>602 00 Brno, Czech Republic</li>
+          <li>Lidicka 700/19<br>602 00 Brno, Czech Republic</li>
         </ul>
       </div>
     </div>
@@ -309,6 +300,7 @@
       <p>&copy; <span data-year></span> ROUNDROCK COTTON s.r.o. All rights reserved.</p>
       <div>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookies Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
     </div>

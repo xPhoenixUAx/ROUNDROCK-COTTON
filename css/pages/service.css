@@ -72,9 +72,14 @@
 }
 
 .service-layout {
-  padding-top: 0;
+  padding-top: clamp(2.2rem, 4vw, 3.4rem);
   padding-bottom: clamp(4rem, 7vw, 6rem);
   background: #ffffff;
+}
+
+.cta-banner {
+  margin-bottom: 0;
+  padding-bottom: clamp(2rem, 4vw, 3.2rem);
 }
 
 .service-layout::before {
@@ -84,16 +89,16 @@
 .service-layout__grid {
   display: grid;
   grid-template-columns: minmax(16rem, 18rem) minmax(0, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(1.9rem, 3.4vw, 3rem);
   align-items: start;
-  margin-top: -2.25rem;
+  margin-top: 0;
 }
 
 .service-sidebar {
   position: sticky;
   top: calc(var(--header-height) + 1.25rem);
   display: grid;
-  gap: 1.35rem;
+  gap: 1.6rem;
 }
 
 .service-detail-nav {
@@ -167,8 +172,8 @@
 
 .service-sidebar__card-copy {
   display: grid;
-  gap: 0.9rem;
-  padding: 1.2rem;
+  gap: 1rem;
+  padding: 1.45rem;
   margin-top: -7.5rem;
   position: relative;
   z-index: 1;
@@ -195,7 +200,7 @@
 
 .service-layout__content {
   display: grid;
-  gap: 1.35rem;
+  gap: 1.8rem;
 }
 
 .service-lead-card,
@@ -227,8 +232,8 @@
 
 .service-lead-card__body {
   display: grid;
-  gap: 0.9rem;
-  padding: 1.2rem 0 0;
+  gap: 1rem;
+  padding: 1.45rem 0 0;
 }
 
 .service-lead-card__body h2 {
@@ -262,7 +267,27 @@
 
 .service-layout__content .section-heading {
   gap: 0.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.service-layout__content .summary-card,
+.service-layout__content .includes-card,
+.service-layout__content .deliverables-panel,
+.service-layout__content .impact-card,
+.service-layout__content .approach-step {
+  padding: clamp(1.75rem, 2.5vw, 2.35rem);
+}
+
+.service-layout__content .faq-trigger {
+  padding: 1.5rem 1.6rem;
+}
+
+.service-layout__content .faq-answer p {
+  padding: 0 1.6rem 0;
+}
+
+.service-layout__content .faq-item.is-open .faq-answer p {
+  padding-bottom: 1.45rem;
 }
 
 .service-layout__content .section-heading .eyebrow {
@@ -314,15 +339,47 @@
 .approach-timeline {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-.approach-step span {
-  color: #2f67ff;
-  font-size: 0.88rem;
+.approach-step {
+  display: grid;
+  align-content: start;
+  gap: 1.1rem;
+  min-height: 15.75rem;
+}
+
+.approach-step:last-child {
+  grid-column: 1 / -1;
+}
+
+.approach-step__head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.approach-step__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.35rem;
+  height: 2.55rem;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  border: 1px solid rgba(47, 103, 255, 0.16);
+  color: #6bc5ff;
+  font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
+  line-height: 1;
   text-transform: uppercase;
+  box-shadow:
+    inset 0 -1px 0 rgba(47, 103, 255, 0.08),
+    0 8px 18px rgba(47, 103, 255, 0.06);
 }
 
 .impact-grid {
@@ -331,8 +388,33 @@
   gap: 1rem;
 }
 
-.impact-card span {
-  color: #2f67ff;
+.impact-card {
+  position: relative;
+  display: grid;
+  gap: 0.95rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.impact-card__head {
+  position: absolute;
+  right: -0.85rem;
+  bottom: -1.1rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.impact-card__icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  color: rgba(47, 103, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.impact-card h3,
+.impact-card p {
+  position: relative;
+  z-index: 1;
 }
 
 .faq-list {
@@ -377,6 +459,10 @@
   .service-sidebar__card-copy {
     margin-top: -5rem;
   }
+
+  .service-layout__content {
+    gap: 1.55rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -391,7 +477,7 @@
   }
 
   .service-layout__grid {
-    margin-top: -1.4rem;
+    margin-top: 0;
   }
 
   .service-detail-nav,
@@ -403,6 +489,18 @@
   .service-sidebar__card-copy {
     margin-top: 0;
     padding-top: 1rem;
+  }
+
+  .service-layout__content {
+    gap: 1.35rem;
+  }
+
+  .service-layout__content .summary-card,
+  .service-layout__content .includes-card,
+  .service-layout__content .deliverables-panel,
+  .service-layout__content .impact-card,
+  .service-layout__content .approach-step {
+    padding: 1.45rem;
   }
 
   .service-lead-card__media img {

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ROUNDROCK COTTON favicon">
+  <defs>
+    <linearGradient id="rcBg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f67ff"/>
+      <stop offset="1" stop-color="#1f4fe0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#rcBg)"/>
+  <path d="M18 18h15.5c6.7 0 11 3.9 11 9.8 0 4.5-2.4 7.4-6.4 8.7L46 46H36l-6.2-8.1h-3.3V46H18V18Zm8.5 7v6.6h6c2.2 0 3.6-1.2 3.6-3.2 0-2.1-1.4-3.4-3.7-3.4h-5.9Z" fill="#ffffff"/>
+  <circle cx="48" cy="17" r="5" fill="#f2a11c"/>
+</svg>
