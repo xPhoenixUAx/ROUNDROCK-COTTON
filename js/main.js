@@ -177,6 +177,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initValueTabs = () => {
+    const tabButtons = document.querySelectorAll("[data-value-tab]");
+    const panels = document.querySelectorAll("[data-value-panel]");
+
+    if (!tabButtons.length || !panels.length) return;
+
+    const activateTab = (target) => {
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.valueTab === target;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.dataset.valuePanel === target;
+        panel.classList.toggle("is-active", isActive);
+        panel.hidden = !isActive;
+      });
+    };
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => activateTab(button.dataset.valueTab));
+    });
+  };
+
   const initContactForm = () => {
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");
@@ -200,6 +225,93 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initCountups = () => {
+    const counters = document.querySelectorAll("[data-count]");
+    if (!counters.length) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const formatValue = (value, suffix = "") => `${Math.round(value).toLocaleString("en-US")}${suffix}`;
+
+    const animateCounter = (node) => {
+      const target = Number(node.dataset.count || 0);
+      const suffix = node.dataset.suffix || "";
+
+      if (!target) {
+        node.textContent = formatValue(target, suffix);
+        return;
+      }
+
+      if (reducedMotion) {
+        node.textContent = formatValue(target, suffix);
+        return;
+      }
+
+      const duration = 1400;
+      const start = performance.now();
+
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        node.textContent = formatValue(target * eased, suffix);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+
+      window.requestAnimationFrame(step);
+    };
+
+    const seen = new WeakSet();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || seen.has(entry.target)) return;
+          seen.add(entry.target);
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    counters.forEach((node) => observer.observe(node));
+  };
+
+  const initTestimonials = () => {
+    const root = document.querySelector("[data-testimonials]");
+    if (!root) return;
+
+    const items = Array.from(root.querySelectorAll("[data-testimonial-item]"));
+    const prev = root.querySelector("[data-testimonial-prev]");
+    const next = root.querySelector("[data-testimonial-next]");
+    if (!items.length || !prev || !next) return;
+
+    let activeIndex = items.findIndex((item) => item.classList.contains("is-active"));
+    if (activeIndex < 0) activeIndex = 0;
+
+    const render = () => {
+      items.forEach((item, index) => {
+        const isActive = index === activeIndex;
+        item.classList.toggle("is-active", isActive);
+        item.hidden = !isActive;
+      });
+    };
+
+    prev.addEventListener("click", () => {
+      activeIndex = (activeIndex - 1 + items.length) % items.length;
+      render();
+    });
+
+    next.addEventListener("click", () => {
+      activeIndex = (activeIndex + 1) % items.length;
+      render();
+    });
+
+    render();
+  };
+
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = new Date().getFullYear();
   });
@@ -210,7 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactDrawer();
   initModal();
   initFaq();
+  initValueTabs();
   initContactForm();
+  initCountups();
+  initTestimonials();
 
   if (window.lucide) {
     window.lucide.createIcons();
