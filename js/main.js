@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const href = link.getAttribute("href");
       const match =
         (page === "home" && href === "index.html") ||
-        (page === "services" && href === "services.html") ||
-        (page === "service-detail" && href === "service-detail.html") ||
+        (page === "service-detail" && href === "index.html#services-preview") ||
         (page === "about" && href === "about.html") ||
         (page === "contact" && href === "contact.html") ||
         (page === "privacy" && href === "privacy.html") ||
